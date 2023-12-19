@@ -1,4 +1,8 @@
-.yt-text-styles {
+.footer-bg {
+    background-color: rgba(230, 237, 255, 0.5);
+}
+
+.footer-text-styles {
     color: #07366F;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
