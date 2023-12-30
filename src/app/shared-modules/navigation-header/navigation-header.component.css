@@ -1,13 +1,60 @@
-.navbar-font-style a {
-    color: #07366F;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* Header */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    padding: 0px 0;
 }
 
-.nav-text-logo{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
-    font-size: 1.5em;
+
+header .navbar-brand {
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-weight: 800;
+    font-size: 2rem;
 }
 
-.navbar-bg-color {
-    background-color: #E6EDFF;
+header .navbar-brand.absolute {
+    position: absolute;
+}
+
+@media (max-width: 999px) {
+    header .navbar-brand.absolute {
+        position: relative;
+    }
+}
+
+header .navbar-brand span {
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    header .navbar-brand span {
+        color: #ced4da;
+    }
+}
+
+header .navbar {
+    background: var(--space-cadet) !important;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+@media (min-width: 768px) {
+    header .navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+        background: none !important;
+        position: relative;
+    }
+}
+
+header .navbar .nav-link {
+    padding: 1.7rem 1rem;
+    outline: none !important;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8) !important;
 }

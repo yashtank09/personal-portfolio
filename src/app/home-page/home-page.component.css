@@ -1,8 +1,17 @@
-.home-background-image {
-    
-}
+/* 
+    Color Properties
+*/
+
+
 
 .home-background-image img{
     width: 100%;
     position: relative;
+}
+
+.home-background-image .rounded-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'yt-navigation-header',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation-header.component.css']
 })
 export class NavigationHeaderComponent {
-
+  
 }
