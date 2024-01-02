@@ -1,12 +1,10 @@
-/* 
-    Color Properties
-*/
-
-
-
 .home-background-image img{
     width: 100%;
     position: relative;
+}
+
+.svg-embed {
+    width: 400px;
 }
 
 .home-background-image .rounded-circle {
@@ -14,4 +12,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.title-image h1 {
+    z-index: inherit;
 }
