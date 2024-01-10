@@ -1,10 +1,33 @@
-.home-background-image img{
+.home-background-image img {
     width: 100%;
     position: relative;
 }
 
+.col-md-4 {
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+.titla-short-intro{
+    margin-top: 0px auto;
+}
+
+.titla-short-intro .col-md-4 {
+    display: flex;
+    align-items: center;
+}
+
+.titla-short-intro .col-md-8 {
+    display: inline-grid;
+    margin: 0px auto;
+    padding: 1rem;
+    text-align: justify;
+    text-justify: revert;
+}
+
 .svg-embed {
-    width: 400px;
+    width: 240px;
+    height: 240px;
 }
 
 .home-background-image .rounded-circle {
