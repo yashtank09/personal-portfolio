@@ -1,0 +1,10 @@
+.master-title {
+    margin: 2rem;
+}
+
+.display-1 {
+    -webkit-text-stroke: 1px rgba(4, 18, 37, 0.15);
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.2;
+}

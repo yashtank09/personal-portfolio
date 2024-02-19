@@ -1,32 +1,43 @@
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md">
         <div class="container">
             <a class="navbar-brand" href="#">TYJ</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <div class="nav-link-section">
+                            <a class="nav-link" routerLinkActive="/" routerLink="/">Home</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <div class="nav-link-section">
+                            <a class="nav-link" routerLinkActive="active" routerLink="/education">Education</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Skills</a>
+                        <div class="nav-link-section">
+                            <a class="nav-link" routerLinkActive="active" routerLink="/experience">Experience</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Experience</a>
+                        <div class="nav-link-section">
+                            <a class="nav-link" routerLinkActive="active" routerLink="/projects">Projects</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Achievements</a>
+                        <div class="nav-link-section">
+                            <a class="nav-link" routerLinkActive="active" routerLink="/contact">Contact</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Resume</a>
+                        <div class="nav-link-section">
+                            <button class="btn btn-primary">Resume <i class="bi bi-download"></i></button>
+                        </div>
                     </li>
                 </ul>
             </div>

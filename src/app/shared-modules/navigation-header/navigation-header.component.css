@@ -1,7 +1,7 @@
 /* Header */
 
 header {
-    position: absolute;
+    position: inherit;
     top: 0;
     left: 0;
     width: 100%;
@@ -11,10 +11,11 @@ header {
 
 
 header .navbar-brand {
+    color: var(--white);
     text-transform: uppercase;
-    letter-spacing: .05em;
+    letter-spacing: .08em;
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 header .navbar-brand.absolute {
@@ -39,22 +40,27 @@ header .navbar-brand span {
 
 header .navbar {
     background: var(--space-cadet) !important;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
 }
 
 @media (min-width: 768px) {
     header .navbar {
         padding-top: 0;
         padding-bottom: 0;
-        background: none !important;
+        background: var(--space-cadet) !important;
         position: relative;
     }
 }
 
+header .navbar .nav-link-section {
+    padding: 1rem 1rem;
+}
+
 header .navbar .nav-link {
-    padding: 1.7rem 1rem;
     outline: none !important;
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.8) !important;
+}
+
+header[_ngcontent-ng-c1435824420] .navbar[_ngcontent-ng-c1435824420] .nav-link-section[_ngcontent-ng-c1435824420] {
+    padding: 1.2rem 0.8rem;
 }

@@ -1,0 +1,18 @@
+.content {
+    padding: 2rem 0;
+    line-height: 2;
+}
+
+.container {
+    width: var(--container-width);
+}
+
+.contact-icon {
+    width: 30px;
+}
+
+/* Button */
+
+.contact-btn-submit{
+    padding-top: 14px;
+}

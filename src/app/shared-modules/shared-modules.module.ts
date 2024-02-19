@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FooterComponent } from './footer/footer.component';
+import { HeroTitleComponent } from './hero-title/hero-title.component';
+import { MasterTitlesComponent } from './master-titles/master-titles.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HeroTitleComponent,
+    MasterTitlesComponent
+  ],
   exports:[
+    HeroTitleComponent,
+    MasterTitlesComponent
   ],
   imports: [
     CommonModule

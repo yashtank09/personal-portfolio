@@ -10,8 +10,9 @@
     --alabaster: hsla(34, 30%, 91%, 1);
     --timberwolf: hsla(10, 8%, 85%, 1);
     --pacific-cyan: hsla(196, 56%, 56%, 1);
-    --space-cadet: hsl(243, 23%, 18%);
+    --space-cadet: hsl(214, 81%, 8%);
     --white: hsl(0, 0%, 100%);
+    --white-smoke: whitesmoke;
 
 
     /*
@@ -24,6 +25,7 @@
     /* 
      * Spacing
      */
+    --container-width: 75%;
     --section-padding: 60px;
 
     /* 
@@ -38,9 +40,21 @@
     --transition-1: 0.05s ease;
     --transition-2: 0.25s ease;
     --cubic-out: cubic-bezier(0.33, 0.85, 0.56, 1.02);
+
+    /**
+     * Fonts families
+     */
+    --gill-sanserif: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --courier-new: 'Courier New', Courier, monospace;
 }
 
-body p{
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body p {
     font-size: 1rem;
     font-style: inherit;
     line-height: 1.75;

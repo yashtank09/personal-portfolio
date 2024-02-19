@@ -6,17 +6,31 @@ import { AppComponent } from './app.component';
 import { NavigationHeaderComponent } from './shared-modules/navigation-header/navigation-header.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './shared-modules/footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { AchievementsComponent } from './achievements/achievements.component';
+import { ContactComponent } from './contact/contact.component';
+import { EducationComponent } from './education/education.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { SharedModulesModule } from './shared-modules/shared-modules.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationHeaderComponent,
     HomePageComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    ExperienceComponent,
+    AchievementsComponent,
+    ContactComponent,
+    EducationComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModulesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

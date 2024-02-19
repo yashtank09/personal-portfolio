@@ -1,11 +1,16 @@
+.container {
+    width: 75%;
+}
+
 footer {
     margin: 0 auto;
     display: block;
     padding: 2rem 0;
+    position: static;
 }
 
-footer .container {
-    width: 60%;
+footer {
+    width: 100%;
 }
 
 .footer-styles {
