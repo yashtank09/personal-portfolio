@@ -1,5 +1,5 @@
 .master-title {
-    margin: 2rem;
+    margin: 1.5rem;
 }
 
 .display-1 {
@@ -7,4 +7,8 @@
     font-size: 4rem;
     font-weight: 800;
     line-height: 1.2;
+}
+
+.front-title {
+    font-weight: 600;
 }

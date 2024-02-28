@@ -29,9 +29,8 @@
     }
 }
 
-
 .hero * {
-    transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.5s;
 }
 
 .title-what h1 {
@@ -86,68 +85,91 @@
 }
 
 /* My Services */
-.my-services {}
-
-.my-services .icon-box {
+.services .icon-box {
     text-align: center;
 }
 
-.service-body {
-    /* background-color: #002848; */
-}
-
-.my-services .icon {
+.services .icon {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
-    background: #fff;
-    border-radius: 50%;
+    margin-bottom: 1.6rem;
     transition: 0.5s;
-    color: #428bca;
-    box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
+    color: var(--boston-blue);
     overflow: hidden;
 }
 
-.my-services .icon i {
-    font-size: 36px;
+.services .icon i {
+    font-size: 4rem;
     line-height: 0;
 }
 
-.my-services .title {
+.services .title {
     font-weight: 600;
-    margin-bottom: 15px;
-    font-size: 18px;
+    margin-bottom: 0;
+    font-size: 20px;
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 1.2rem;
 }
 
-.my-services .title a {
-    color: #444;
-    transition: 0.3s;
-}
-
-.my-services .title a:hover {
-    color: #428bca;
-}
-
-.my-services .title::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 2px;
-    background: #428bca;
-    bottom: 0;
-    left: calc(50% - 25px);
-}
-
-.my-services .description {
+.services .description {
     line-height: 24px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* skills */
-.skills {}
+.list-icons {
+    font-size: 2.5rem;
+}
+
+.list-inline-item {
+    margin: 0;
+    padding: 12px;
+}
+
+.progress-bar,
+.btn {
+    height: 1.2rem;
+    background-color: var(--boston-blue);
+}
+
+/* Hire Me */
+.hire-me {
+    text-align: center;
+}
+
+.hire-me .h01 {
+    margin: 1.4rem;
+}
+
+.hire-me p {
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+.button {
+    display: inline-block;
+    font-family: var(--gill-sanserif);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    border-radius: 100px;
+    padding: 1rem 2.2rem;
+    margin: 1rem;
+    background: var(--boston-blue);
+    color: var(--white-smoke);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+
+.button:hover {
+    background: #428bcaca;
+    color: white;
+    outline: 0;
+}
+
+.button-primary:focus {
+    background: #428bca9c;
+    color: white;
+}
