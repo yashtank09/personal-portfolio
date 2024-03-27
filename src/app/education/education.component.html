@@ -36,25 +36,10 @@
     <div class="row my-4" id="experiences">
         <master-titles title-shadow="Productivity" title-over="Achievements"></master-titles>
         <div class="row my-4 d-flex justify-content-between">
-            <div class="card mb-4 achievements-card">
-                <img src="../../assets/imaages/achievements/DJ4E-VT9DWX8CEP4Y.jpg" class="card-img-top" alt="...">
+            <div class="card mb-4 achievements-card" *ngFor="let achives of achived">
+                <img [src]="achives.achievImgSrc" class="card-img-top" [alt]="achives.achievImgAlter">
                 <div class="card-body">
-                    <p class="card-text">Python for Everybody Specialization on Coursera by University of Michigan 2023
-                        [5ZHG2JG4V535]</p>
-                </div>
-            </div>
-            <div class="card mb-4 achievements-card">
-                <img src="../../assets/imaages/achievements/62T76L8JN4AY-1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-            <div class="card mb-4 achievements-card">
-                <img src="../../assets/imaages/achievements/DJ4E-VT9DWX8CEP4Y.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    <p class="card-text">{{ achives.achievDescription }} <a [href]="baseCourseraCertificationApi + achives.certificateId">[{{ achives.certificateId }}]</a></p>
                 </div>
             </div>
         </div>

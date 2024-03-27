@@ -13,6 +13,8 @@ import { ContactComponent } from './contact/contact.component';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SharedModulesModule } from './shared-modules/shared-modules.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,10 @@ import { SharedModulesModule } from './shared-modules/shared-modules.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModulesModule
+    SharedModulesModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
