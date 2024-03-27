@@ -1,0 +1,15 @@
+.container {
+    width: var(--container-width);
+}
+
+.svg-embed {
+    width: 270px;
+}
+
+.card {
+    border: 0 none;
+}
+
+.achievements-card {
+    width: 18rem;
+}

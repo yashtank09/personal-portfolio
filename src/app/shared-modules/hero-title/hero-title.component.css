@@ -1,0 +1,44 @@
+.container {
+    width: var(--container-width);
+}
+
+/* Home Hero */
+.hero {
+    position: inherit;
+    height: 20vh;
+    display: grid;
+    align-items: center;
+    background-color: var(--space-cadet);
+}
+
+.hero * {
+    transition: ease-in-out 0.3s;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 400;
+    font-family: "Popping", sans-serif;
+    color: white;
+    display: inline-block;
+}
+
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .hero .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

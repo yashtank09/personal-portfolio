@@ -1,0 +1,176 @@
+.container {
+    width: var(--container-width);
+}
+
+/* Home Hero */
+.hero {
+    /* background: url("../../assets/imaages/hero-bg-titile.jpg"); */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    position: inherit;
+    height: 41rem;
+    display: grid;
+    align-items: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero * {
+    transition: ease-in-out 0.5s;
+}
+
+.title-what h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    font-family: "Popping", sans-serif;
+    color: white;
+    display: inline-block;
+}
+
+.hero h2 {
+    font-family: var(--courier-new);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: var(--white-smoke);
+}
+
+.hero h2 span {
+    color: var(--white-smoke);
+    font-weight: bolder;
+    padding-bottom: 6px;
+    border-bottom: 3px solid chartreuse;
+}
+
+@media (max-width: 992px) {
+    .hero {
+        height: 35rem;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .hero .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* My Services */
+.services .icon-box {
+    text-align: center;
+}
+
+.services .icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.6rem;
+    transition: 0.5s;
+    color: var(--boston-blue);
+    overflow: hidden;
+}
+
+.services .icon i {
+    font-size: 4rem;
+    line-height: 0;
+}
+
+.services .title {
+    font-weight: 600;
+    margin-bottom: 0;
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 1.2rem;
+}
+
+.services .description {
+    line-height: 24px;
+    font-size: 12px;
+}
+
+/* skills */
+.list-icons {
+    font-size: 2.5rem;
+}
+
+.list-inline-item {
+    margin: 0;
+    padding: 12px;
+}
+
+.progress-bar,
+.btn {
+    height: 1.2rem;
+    background-color: var(--boston-blue);
+}
+
+/* Hire Me */
+.hire-me {
+    text-align: center;
+}
+
+.hire-me .h01 {
+    margin: 1.4rem;
+    font-weight: 800;
+}
+
+.hire-me p {
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+.button {
+    display: inline-block;
+    font-family: var(--gill-sanserif);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    border-radius: 100px;
+    padding: 1rem 2.2rem;
+    margin: 1rem;
+    background: var(--boston-blue);
+    color: var(--white-smoke);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+
+.button:hover {
+    background: #428bcaca;
+    color: white;
+    outline: 0;
+}
+
+.button-primary:focus {
+    background: #428bca9c;
+    color: white;
+}
