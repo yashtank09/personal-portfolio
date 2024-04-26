@@ -1,0 +1,66 @@
+/* Header */
+
+header {
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    padding: 0px 0;
+}
+
+
+header .navbar-brand {
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+header .navbar-brand.absolute {
+    position: absolute;
+}
+
+@media (max-width: 999px) {
+    header .navbar-brand.absolute {
+        position: relative;
+    }
+}
+
+header .navbar-brand span {
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    header .navbar-brand span {
+        color: #ced4da;
+    }
+}
+
+header .navbar {
+    background: var(--space-cadet) !important;
+}
+
+@media (min-width: 768px) {
+    header .navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+        background: var(--space-cadet) !important;
+        position: relative;
+    }
+}
+
+header .navbar .nav-link-section {
+    padding: 1rem 1rem;
+}
+
+header .navbar .nav-link {
+    outline: none !important;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+header[_ngcontent-ng-c1435824420] .navbar[_ngcontent-ng-c1435824420] .nav-link-section[_ngcontent-ng-c1435824420] {
+    padding: 1.2rem 0.8rem;
+}

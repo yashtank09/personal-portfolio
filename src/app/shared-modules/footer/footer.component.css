@@ -1,0 +1,48 @@
+.container {
+    width: 75%;
+}
+
+footer {
+    margin: 0 auto;
+    display: block;
+    padding: 2rem 0;
+    position: static;
+}
+
+footer {
+    width: 100%;
+}
+
+.footer-styles {
+    background-color: var(--space-cadet);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    color: rgb(134, 225, 255);
+    text-decoration: none;
+}
+
+footer h4 {
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+footer i{
+    margin: 0 auto;
+    color: white;
+}
+
+.copyright {
+    padding: 1rem 0;
+    font-size: small;
+}
+
+hr {
+    color: aliceblue;
+    border: 0;
+    margin: 1rem;
+    border-top: 2px solid gray;
+    align-items: center;
+}

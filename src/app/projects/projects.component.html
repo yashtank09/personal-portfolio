@@ -1,0 +1,24 @@
+<!-- Hero -->
+<yt-hero hero-title="Projects"></yt-hero>
+
+<!-- Short Intro -->
+<div class="container short-intro">
+
+    <div class="container">
+        <div class="row my-4" id="education">
+            <master-titles title-shadow="Practical Work" title-over="Projects"></master-titles>
+        </div>
+    </div>
+    <div class="row my-4" id="git-repo-project">
+        <div class="card repo-cards" style="width: 20rem;" *ngFor="let repos of projectRepo">
+            <div class="card-body">
+                <i class="devicon-github-original colored"></i>
+                <a [href]="repos.repoUrl" class="card-title card-title-link"><strong>{{repos.repoTitle}}<i class="fa-solid fa-link"></i></strong></a>
+                <div class="repo-description"><p class="card-text">{{repos.repoDescription}}</p></div>
+                <div class="repo-features"><span class="repo-icons"><strong></strong><i class="fa-regular fa-star" style="color: goldenrod;"></i></span>
+                <span class="repo-icons"><strong></strong><i class="fa-solid fa-code-fork" style="color: black;"></i></span></div>
+            </div>
+        </div>
+    </div>
+
+</div>

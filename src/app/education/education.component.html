@@ -1,0 +1,48 @@
+<!-- Hero -->
+<yt-hero hero-title="Education"></yt-hero>
+
+<!-- Short Intro -->
+<div class="container short-intro">
+
+    <div class="row my-4" id="education">
+        <master-titles title-shadow="Academic Background" title-over="Education"></master-titles>
+        <div class="row">
+            <div class="border-left border-primary pt-2 pl-4 ml-2">
+                <div class="position-relative mb-4 justify-content-center">
+                    <i class="bi bi-mortarboard-fill position-absolute" style="top: 2px; left: -32px;"></i>
+                    <h5 class="font-weight-bold mb-1">Master of Commputer Applications <strong>(MCA)</strong></h5>
+                    <p class="mb-2"><strong>Dr. Subhash Technical Campus (Gujarat Technological University) </strong> |
+                        <small>June, 2022</small>
+                    </p>
+                    <p>Relevant coursework: Distributed Systems, Advanced Java Programming, Database Management Systems.
+                    </p>
+                </div>
+                <div class="position-relative mb-4">
+                    <i class="bi bi-mortarboard-fill position-absolute" style="top: 2px; left: -32px;"></i>
+                    <h5 class="font-weight-bold mb-1">Bachelor in Computer Applications <strong>(BCA)</strong></h5>
+                    <p class="mb-2"><strong> Swami Shree Dharmajivandasji Institute of Information Technology (Bhakta
+                            Kavi Narsinh Mehta University) </strong> | <small>August, 2020</small></p>
+                    <p>Empowered diverse clients with seamless live broadcasting experiences through innovative
+                        solutions and exceptional client communication.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container short-intro">
+
+    <div class="row my-4" id="experiences">
+        <master-titles title-shadow="Productivity" title-over="Achievements"></master-titles>
+        <div class="row my-4 d-flex justify-content-between">
+            <div class="card mb-4 achievements-card" *ngFor="let achives of achived">
+                <img [src]="achives.achievImgSrc" class="card-img-top" [alt]="achives.achievImgAlter">
+                <div class="card-body">
+                    <p class="card-text">{{ achives.achievDescription }} <a [href]="baseCourseraCertificationApi + achives.certificateId">[{{ achives.certificateId }}]</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,22 @@
+.container {
+    width: var(--container-width);
+}
+
+.repo-cards {
+    box-shadow: 4px 8px darkgray;
+    padding: 10px;
+    margin: 10px;
+}
+
+.repo-cards .repo-description{
+    padding-top: 10px;
+    height: 100px;
+}
+
+.repo-cards .card-title-link {
+    padding: 8px;
+}
+
+.repo-cards .repo-icons{
+    padding-right: 10px;
+}

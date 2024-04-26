@@ -1,0 +1,61 @@
+name: Build and Deploy My Portfolio
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js 18.12.0
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.12.0
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build production package
+        run: npm run build --prod
+
+      - name: Archive production build
+        uses: actions/upload-artifact@v3
+        with:
+          name: prod-build
+          path: dist/
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: prod
+      url: "https://yashtank09.github.io"
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: 'yashtank09/yashtank09.github.io'
+          ref: 'main'
+          token: ${{ secrets.GH_TOK }}
+
+      - name: Download production build
+        uses: actions/download-artifact@v3
+        with:
+          name: prod-build
+
+      - name: Deploy to production
+        run: |
+          git config user.name 'yashtank09'
+          git config user.email 'yashtank09@gmail.com'
+          git add .
+          git commit -m "Deploy production build."
+          git push origin main
+
+      - name: Grant access to deploy token (optional)
+        run: echo "Token authentication..." # ${{ secrets.GH_TOK }}
+        env:
+          ACCESS_TOKEN: ${{ secrets.GH_TOK }}

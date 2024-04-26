@@ -1,0 +1,31 @@
+.container {
+    width: var(--container-width);
+}
+
+/* TITLES */
+.display-1 {
+    -webkit-text-stroke: 1px #dee2e6;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* ACHIEVEMENTS */
+.svg-embed {
+    width: 270px;
+}
+
+.display-1 {
+    -webkit-text-stroke: 1px #dee2e6;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.card {
+    border: 0 none;
+}
+
+.achievements-card {
+    width: 18rem;
+}
