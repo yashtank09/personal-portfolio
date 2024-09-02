@@ -3,6 +3,7 @@ import { MailgunServiceService } from '../services/mailgun-service.service';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { contact } from '../common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'yt-contact',
@@ -16,7 +17,7 @@ export class ContactComponent {
   contactNumber: string = contact.NUMBER;
   formspreeSecretKey: string = "xpwanayn";
 
-  constructor(private mailService: MailgunServiceService, private formBuilder: FormBuilder, private httpClient: HttpClient) {
+  constructor(private mailService: MailgunServiceService, private messageService: MessageService, private formBuilder: FormBuilder, private httpClient: HttpClient) {
     this.contactMeForm = this.formBuilder.group({
       contactName: new FormControl(''),
       contactSubject: new FormControl(''),
@@ -65,11 +66,14 @@ export class ContactComponent {
 
     this.httpClient.post<any>(url, data, httpOptions).subscribe({
       next: data => {
-        console.log("email sent" + JSON.stringify(data));
+        // console.log("email sent" + JSON.stringify(data));
+        this.messageService.add({severity:'success', summary: 'Email Sent', detail: 'Your message sent successfully.'});
+        this.contactMeForm.reset();
       },
       error: error => {
         errorMessage = error.message;
-        console.log('error!', errorMessage);
+        console.log(errorMessage);
+        this.messageService.add({severity:'error', summary: 'Error', detail: 'Something went wrong!'});
       }
     })
   }
