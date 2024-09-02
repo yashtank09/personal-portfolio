@@ -11,5 +11,5 @@ export enum socialmedia {
 
 export enum contact {
     EMAIL = "yashtank09@gmail.com",
-    NUMBER = "+91 7984248787"
+    NUMBER = "+917984248787"
 }

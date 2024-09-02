@@ -15,6 +15,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SharedModulesModule } from './shared-modules/shared-modules.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastModule } from 'primeng/toast';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AchievementsComponent,
     ContactComponent,
     EducationComponent,
-    ProjectsComponent
+    ProjectsComponent    
   ],
   imports: [
     BrowserModule,
@@ -35,9 +38,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SharedModulesModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
