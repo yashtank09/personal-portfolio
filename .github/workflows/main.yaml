@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Build production package
-        run: npm run build --prod || true
+        run: npm run build --prod
 
       - name: Archive production build
         uses: actions/upload-artifact@v3
