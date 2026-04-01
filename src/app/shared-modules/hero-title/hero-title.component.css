@@ -1,44 +1,57 @@
+/* ══════════════════════════════════════════
+   SHARED PAGE HERO STYLES
+   ══════════════════════════════════════════ */
+
 .container {
     width: var(--container-width);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
-/* Home Hero */
-.hero {
-    position: inherit;
-    height: 20vh;
-    display: grid;
-    align-items: center;
-    background-color: var(--space-cadet);
+.page-hero {
+    padding: 8rem 0 3.5rem;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-base);
+    text-align: center;
 }
 
-.hero * {
-    transition: ease-in-out 0.3s;
-}
-
-.hero h1 {
-    font-size: 34px;
+.title-serif {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--ink-primary);
     margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-weight: 400;
-    font-family: "Popping", sans-serif;
-    color: white;
-    display: inline-block;
+    letter-spacing: -0.02em;
 }
 
-@media (max-width: 992px) {
-    .hero h1 {
-        font-size: 36px;
-    }
+.section-eyebrow {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 1rem;
+}
 
-    .hero h2 {
-        font-size: 16px;
-        line-height: 30px;
-    }
+.page-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--ink-primary);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
 
-    .hero .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.hero-sub {
+    font-size: 1.05rem;
+    color: var(--ink-secondary);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.8;
 }

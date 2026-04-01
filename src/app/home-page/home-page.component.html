@@ -1,162 +1,264 @@
-<!-- Hero -->
-<div class="hero">
-    <div class="container">
-        <h1>Yash Tank</h1>
-        <h2>Passionate <span>Software Developer</span> elevating the future horizon.</h2>
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║           HERO SECTION               ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<div class="hero" id="hero">
+    <div class="container hero-container">
+        <!-- Left: Content -->
+        <div class="hero-content">
+            <!-- Availability pill -->
+            <span class="hero-badge" id="hero-availability-badge">
+                <span class="badge-dot"></span>
+                Available for Projects
+            </span>
+
+            <!-- Headline — mixed serif & sans -->
+            <h1 class="hero-title" id="hero-headline">
+                Engineering Systems<br>
+                That <em>Scale</em>,<br>
+                <span class="hero-title-light">Think & Deliver.</span>
+            </h1>
+
+            <!-- Sub-headline -->
+            <p class="hero-sub" id="hero-subheadline">
+                Senior Full Stack Engineer specialising in
+                <strong>Java · Spring Boot · Angular</strong> — and the next frontier of
+                <strong>Agentic AI</strong> powered by Google Antigravity.
+            </p>
+
+            <!-- CTA Row -->
+            <div class="hero-cta" id="hero-cta">
+                <a class="btn-primary" routerLink="/projects" id="btn-explore-work">Explore My Work</a>
+                <a class="btn-outline" routerLink="/contact" id="btn-lets-talk">Let's Talk →</a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-social" id="hero-social">
+                <a href="https://github.com/yashtank09" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+                    id="link-github">
+                    <i class="devicon-github-plain"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yashtank" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn" id="link-linkedin">
+                    <i class="devicon-linkedin-plain colored"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Right: Stat card -->
+        <div class="hero-visual" id="hero-stat-card">
+            <div class="hero-card-float" id="hero-info-card">
+                <div class="hc-row" id="hc-stack">
+                    <span class="hc-label">Core Stack</span>
+                    <span class="hc-value">Java · Spring Boot · Angular</span>
+                </div>
+                <div class="hc-row" id="hc-specialty">
+                    <span class="hc-label">Speciality</span>
+                    <span class="hc-value">Agentic AI · Microservices</span>
+                </div>
+                <div class="hc-row" id="hc-status">
+                    <span class="hc-label">Status</span>
+                    <span class="hc-value available">Open to Work <span class="pulse-dot"></span></span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- Introduction -->
-<div class="introduction" id="introduction">
-
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║           ABOUT ME SECTION           ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<div class="section about-section" id="introduction">
     <div class="container">
-        <div class="row my-4" id="education">
-            <master-titles title-shadow="Introducing My Self" title-over="About Me"></master-titles>
+        <div class="section-header">
+            <span class="section-eyebrow">Who I Am</span>
+            <h2 class="section-title">Evolving Software. <span class="title-serif">Empowering Logic.</span></h2>
         </div>
-    </div>
-    <div class="container">
-        <div class="row my-4" id="about-me">
-            <div class="col-md-4">
+        <div class="about-grid">
+            <div class="about-visual">
                 <embed src="../../assets/imaages/20603157_6334180.svg" class="svg-embed" type="image/svg+xml">
             </div>
-            <div class="col-md-8 intro-text">
-                <p class="h5">
-                    "Crafting User-Friendly Software Solutions That Empowers Businesses"
+            <div class="about-content" id="about-content-block">
+                <p class="about-lead">
+                    &ldquo;I don't just build software — I architect systems that scale, secure, and adapt.&rdquo;
                 </p>
-
-                <p class="">
-                    I'm a passionate and results-oriented Software Engineer with a knack for crafting user-friendly
-                    software solutions. My expertise lies in designing, developing, and deploying scalable, secure, and
-                    robust enterprise applications.</p>
-
-                <p class="">Fueled by a strong foundation in Java, Spring Boot, Angular and fronte-end technologies
-                    (HTML, CSS, JavaScript) leverage my skills to build robust web applications and APIs that creates
-                    semless user experiences across various devices. Beyond technical powers, I prioritize collabrative
-                    work with cross-functional teams has equipped me to communicate ideas, troubleshoot challenges that
-                    derives growth.</p>
-
-                <p class="">I'm eager to leverage my skills and global mindset to contribute to a dynamic team that
-                    values innovation and impactful results.</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<!-- What I do? -->
-<div class="services" id="myServices">
-    <div class="container">
-        <div class="row my-4" id="education">
-            <master-titles title-shadow="Actual Working" title-over="What I do?"></master-titles>
-        </div>
-    </div>
-    <div class="service-body">
-        <div class="container">
-            <div class="row my-4">
-                <div class="col-lg-4 col-md-6 mb-4 icon-box" data-aos="fade-up">
-                    <div class="icon"><i class="bi bi-database-fill-gear"></i></div>
-                    <h4 class="title"><span>Development</span></h4>
-                    <p class="description">From ideation to deployment, crafting innovative ideas into fruitful software
-                        solutions through robust and scalable code tailored to your business needs.</p>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 icon-box">
-                    <div class="icon"><i class="bi bi-file-earmark-code"></i></div>
-                    <h4 class="title"><span>Web Designing</span></h4>
-                    <p class="description">Let me design a digital masterpiece that captivates your audience and
-                        elevates your brand's online presence with intuitive UX and visually stunning UI.</p>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 icon-box">
-                    <div class="icon"><i class="bi bi-box-fill"></i></div>
-                    <h4 class="title"><span>Technical Consulting</span></h4>
-                    <p class="description">Unlock your organization's potential with my technical expertise, offers
-                        strategic guidance and innovative solutions to drive growth and stay ahead of the curve.</p>
-                </div>
+                <p>
+                    I'm a Senior Full Stack Engineer with a proven track record of architecting
+                    secure, scalable enterprise applications. My foundation is built on engineering robust,
+                    data-heavy systems using <strong>Java</strong> and <strong>Spring Boot</strong>, seamlessly
+                    paired with high-performance frontend experiences in <strong>Angular</strong>.
+                </p>
+                <p>
+                    Today, I'm traversing the new frontier of software engineering. I leverage
+                    <strong>Google Antigravity</strong> to build intelligent, agentic AI workflows that
+                    solve complex business logic — transforming traditional applications into autonomous
+                    solutions that think, scale, and deliver.
+                </p>
+                <a class="btn-outline sm" routerLink="/about" id="btn-view-profile">View Full Profile →</a>
             </div>
         </div>
     </div>
 </div>
 
-<!-- My Skills -->
-<div class="skills" id="skills">
-
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║           SERVICES SECTION           ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<div class="section services-section" id="myServices">
     <div class="container">
-        <div class="row my-4" id="education">
-            <master-titles title-shadow="Quality" title-over="Skills"></master-titles>
+        <div class="section-header">
+            <span class="section-eyebrow">What I Do</span>
+            <h2 class="section-title">My <span class="title-serif">Capabilities</span></h2>
         </div>
-    </div>
 
-    <!-- Skills -->
-    <div class="container">
-        <div class="row my-4">
-            <div class="my-auto">
-                <div class="d-flex align-items-center justify-content-center">
-                    <div class="col-md-10 mx-auto">
-                        <div class="row text-center">
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                                <i class="devicon-java-plain icons-decoration colored" data-bs-toggle="tooltip" data-bs-placement="top" title="Java"></i>
-                                <div>Java</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                                <i class="devicon-azuresqldatabase-plain icons-decoration colored" title="SQL"></i>
-                                <div>SQL</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                                <i class="devicon-spring-original icons-decoration colored" title="Spring"></i>
-                                <div>Spring</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                                <i class="devicon-angularjs-plain icons-decoration colored" title="AngularJS"></i>
-                                <div>Angular</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                                <i class="devicon-html5-plain icons-decoration colored" title="HTML5"></i>
-                                <div>HTML5</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                                <i class="devicon-css3-plain icons-decoration colored" title="CSS3"></i>
-                                <div>CSS3</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                                <i class="devicon-javascript-plain icons-decoration colored" title="JavaScript"></i>
-                                <div>JavaScript</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                                <i class="devicon-jquery-plain icons-decoration colored" title="jQuery"></i>
-                                <div>jQuery</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                                <i class="devicon-bootstrap-plain icons-decoration colored" title="Bootstrap 4"></i>
-                                <div>Bootstrap 4</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                                <i class="devicon-vscode-plain icons-decoration colored" title="VS Code"></i>
-                                <div>VS Code</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                                <i class="devicon-intellij-plain icons-decoration colored" title="Intellij"></i>
-                                <div>Intellij</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                                <i class="devicon-github-plain icons-decoration colored" title="Github"></i>
-                                <div>Github</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>   
+        <div class="services-grid">
+            <!-- Service 1: Enterprise Backend -->
+            <div class="service-card" id="service-backend">
+                <div class="service-icon-wrap" aria-hidden="true">
+                    <i class="bi bi-server"></i>
+                </div>
+                <h3 class="service-title">Enterprise Backend Architecture</h3>
+                <p class="service-desc">
+                    Designing and deploying resilient, high-volume microservices — I build the
+                    unbreakable foundations your business relies on using Java and Spring Boot,
+                    ensuring scalability, security, and peak performance.
+                </p>
+                <ul class="service-tags">
+                    <li>Java</li>
+                    <li>Spring Boot</li>
+                    <li>Microservices</li>
+                    <li>REST APIs</li>
+                </ul>
+            </div>
+
+            <!-- Service 2: Full-Stack Engineering -->
+            <div class="service-card" id="service-fullstack">
+                <div class="service-icon-wrap" aria-hidden="true">
+                    <i class="bi bi-layout-text-window-reverse"></i>
+                </div>
+                <h3 class="service-title">Full-Stack Engineering</h3>
+                <p class="service-desc">
+                    Crafting seamless, end-to-end user experiences. By bridging heavy-duty backends
+                    and dynamic Angular frontends, I deliver comprehensive, production-ready web
+                    applications that users love and businesses depend on.
+                </p>
+                <ul class="service-tags">
+                    <li>Angular</li>
+                    <li>TypeScript</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                </ul>
+            </div>
+
+            <!-- Service 3: Agentic AI Solutions (FEATURED) -->
+            <div class="service-card service-card--ai" id="service-ai">
+                <div class="service-ai-badge" aria-label="New service">New</div>
+                <div class="service-icon-wrap ai" aria-hidden="true">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                </div>
+                <h3 class="service-title">Agentic AI Solutions</h3>
+                <p class="service-desc">
+                    Pioneering autonomous workflows. I leverage <strong>Google Antigravity</strong>
+                    to integrate intelligent AI agents into your systems — automating complex tasks,
+                    enhancing real-time decision-making, and giving your enterprise a cognitive edge.
+                </p>
+                <ul class="service-tags ai-tags">
+                    <li>Google Antigravity</li>
+                    <li>Agentic Workflows</li>
+                    <li>LLM Integration</li>
+                </ul>
             </div>
         </div>
     </div>
-
 </div>
 
-<!-- Hire Me -->
-<div class="hire-me" id="hire-me">
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║           SKILLS SECTION             ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<div class="section skills-section" id="skills">
     <div class="container">
-        <div class="row my-4">
-            <div class="col-md-12">
-                <h1 class="h01">HIRE ME?</h1>
-                <p>Looking for an awesome and reliable software solutions? Try <strong>Yash Tank (Me)</strong>.</p>
-                <a class="button button-primary large" routerLink="/contact">Contact Now!</a>
+        <div class="section-header">
+            <span class="section-eyebrow">Technical Arsenal</span>
+            <h2 class="section-title">My <span class="title-serif">Skills</span></h2>
+        </div>
+
+        <div class="skills-categories">
+            <!-- Backend -->
+            <div class="skill-category" id="skill-cat-backend">
+                <h5 class="skill-cat-title">
+                    <i class="bi bi-cpu-fill" aria-hidden="true"></i> Backend Engineering
+                </h5>
+                <div class="skill-pills">
+                    <span class="pill" id="skill-java"><i class="devicon-java-plain colored"></i> Java</span>
+                    <span class="pill" id="skill-springboot"><i class="devicon-spring-original colored"></i> Spring
+                        Boot</span>
+                    <span class="pill" id="skill-sql"><i class="devicon-azuresqldatabase-plain colored"></i> SQL</span>
+                    <span class="pill" id="skill-microservices"><i class="bi bi-diagram-3-fill"></i>
+                        Microservices</span>
+                    <span class="pill" id="skill-restapi"><i class="bi bi-braces"></i> RESTful APIs</span>
+                </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="skill-category" id="skill-cat-frontend">
+                <h5 class="skill-cat-title">
+                    <i class="bi bi-display" aria-hidden="true"></i> Frontend Capabilities
+                </h5>
+                <div class="skill-pills">
+                    <span class="pill" id="skill-angular"><i class="devicon-angularjs-plain colored"></i> Angular</span>
+                    <span class="pill" id="skill-ts"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+                    <span class="pill" id="skill-js"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                    <span class="pill" id="skill-html"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                    <span class="pill" id="skill-css"><i class="devicon-css3-plain colored"></i> CSS3</span>
+                    <span class="pill" id="skill-bootstrap"><i class="devicon-bootstrap-plain colored"></i>
+                        Bootstrap</span>
+                </div>
+            </div>
+
+            <!-- AI & Innovation -->
+            <div class="skill-category" id="skill-cat-ai">
+                <h5 class="skill-cat-title ai-cat-title">
+                    <i class="bi bi-stars" aria-hidden="true"></i> AI &amp; Autonomous Systems
+                </h5>
+                <div class="skill-pills">
+                    <span class="pill pill--ai" id="skill-antigravity"><i class="bi bi-lightning-charge-fill"></i>
+                        Google Antigravity</span>
+                    <span class="pill pill--ai" id="skill-agentic"><i class="bi bi-robot"></i> Agentic Workflows</span>
+                    <span class="pill pill--ai" id="skill-llm"><i class="bi bi-cpu"></i> LLM Integration</span>
+                    <span class="pill pill--ai" id="skill-prompt"><i class="bi bi-chat-dots-fill"></i> Prompt
+                        Engineering</span>
+                </div>
+            </div>
+
+            <!-- DevOps & Tools -->
+            <div class="skill-category" id="skill-cat-devops">
+                <h5 class="skill-cat-title">
+                    <i class="bi bi-tools" aria-hidden="true"></i> DevOps &amp; Tooling
+                </h5>
+                <div class="skill-pills">
+                    <span class="pill" id="skill-git"><i class="devicon-github-plain"></i> Git / GitHub</span>
+                    <span class="pill" id="skill-intellij"><i class="devicon-intellij-plain colored"></i> IntelliJ
+                        IDEA</span>
+                    <span class="pill" id="skill-vscode"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                    <span class="pill" id="skill-agile"><i class="bi bi-kanban-fill"></i> Agile / Scrum</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║           HIRE ME CTA               ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<div class="section hire-section" id="hire-me">
+    <div class="container">
+        <div class="hire-card" id="hire-cta-card">
+            <span class="section-eyebrow hire-eyebrow">Let's Build Together</span>
+            <h2 class="hire-title">Ready to Elevate Your <span class="title-serif">Engineering?</span></h2>
+            <p class="hire-sub">
+                Whether it's a complex enterprise backend, a high-performance Angular app,
+                or an intelligent AI-driven platform — I build systems that last.
+            </p>
+            <div class="hire-cta">
+                <a class="btn-primary-inv" routerLink="/contact" id="btn-contact-hire">Contact Me Now</a>
             </div>
         </div>
     </div>

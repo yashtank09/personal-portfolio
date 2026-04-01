@@ -1,24 +1,176 @@
 <!-- Hero -->
-<yt-hero hero-title="Projects"></yt-hero>
-<title>Testing</title>
-<!-- Short Intro -->
-<div class="container short-intro">
+<yt-hero hero-eyebrow="My Work" hero-title="Featured" hero-serif="Projects" hero-sub="A curated selection of enterprise systems, full-stack applications, and open-source contributions."></yt-hero>
 
-    <div class="container">
-        <div class="row my-4" id="education">
-            <master-titles title-shadow="Practical Work" title-over="Projects"></master-titles>
+<!-- Featured Projects -->
+<div class="section container" id="featured-projects">
+
+    <!-- Project 1: Enterprise Architecture (image-left) -->
+    <div class="project-row" id="project-microservices">
+        <div class="project-visual">
+            <div class="project-mock">
+                <div class="mock-header">
+                    <span class="mock-dot red"></span>
+                    <span class="mock-dot yellow"></span>
+                    <span class="mock-dot green"></span>
+                    <span class="mock-title">microservices-gateway</span>
+                </div>
+                <div class="mock-body">
+                    <div class="code-line"><span class="c-purple">@RestController</span></div>
+                    <div class="code-line"><span class="c-blue">public class</span> <span class="c-yellow">GatewayController</span> &#123;</div>
+                    <div class="code-line indent"><span class="c-purple">@GetMapping</span>(<span class="c-green">"/api/v1/route"</span>)</div>
+                    <div class="code-line indent"><span class="c-blue">public</span> ResponseEntity&lt;?&gt; <span class="c-yellow">route</span>() &#123;</div>
+                    <div class="code-line indent2"><span class="c-muted">// Intelligent routing logic</span></div>
+                    <div class="code-line indent2"><span class="c-blue">return</span> ResponseEntity.<span class="c-yellow">ok</span>(<span class="c-green">"Scaled &#10003;"</span>);</div>
+                    <div class="code-line indent">&#125;</div>
+                    <div class="code-line">&#125;</div>
+                </div>
+                <div class="mock-tags">
+                    <span>Java</span><span>Spring Boot</span><span>Microservices</span>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row my-4" id="git-repo-project">
-        <div class="card repo-cards" style="width: 20rem;" *ngFor="let repos of projectRepo">
-            <div class="card-body">
-                <i class="devicon-github-original colored"></i>
-                <a [href]="repos.repoUrl" class="card-title card-title-link"><strong>{{repos.repoTitle}}<i class="fa-solid fa-link"></i></strong></a>
-                <div class="repo-description"><p class="card-text">{{repos.repoDescription}}</p></div>
-                <div class="repo-features"><span class="repo-icons"><strong></strong><i class="fa-regular fa-star" style="color: goldenrod;"></i></span>
-                <span class="repo-icons"><strong></strong><i class="fa-solid fa-code-fork" style="color: black;"></i></span></div>
+        <div class="project-content">
+            <span class="project-category">Enterprise Architecture</span>
+            <h3 class="project-title">Scalable Microservices Ecosystem</h3>
+            <p class="project-desc">
+                Architected and delivered highly scalable backend frameworks capable of processing
+                heavy-duty data transactions. Focused on stringent security protocols, optimal
+                routing, and maintainable enterprise logic — built to handle thousands of
+                concurrent requests without breaking a sweat.
+            </p>
+            <div class="project-tech">
+                <span class="tech-pill">Java</span>
+                <span class="tech-pill">Spring Boot</span>
+                <span class="tech-pill">SQL</span>
+                <span class="tech-pill">REST APIs</span>
+                <span class="tech-pill">Microservices</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/yashtank09" target="_blank" rel="noopener noreferrer" class="btn-outline sm">
+                    <i class="devicon-github-plain"></i> View on GitHub
+                </a>
             </div>
         </div>
     </div>
 
+    <div class="project-divider"></div>
+
+    <!-- Project 2: Trade Journal (image-right) -->
+    <div class="project-row reversed" id="project-trade-journal">
+        <div class="project-content">
+            <span class="project-category">Full-Stack Application</span>
+            <h3 class="project-title">Trade Journal</h3>
+            <p class="project-desc">
+                A premium algorithmic journaling and analytics dashboard built for precision.
+                Engineered with Angular to provide traders with real-time metrics, complex
+                interactive charting, and a seamless data visualization experience — helping
+                traders make smarter, data-driven decisions.
+            </p>
+            <div class="project-tech">
+                <span class="tech-pill">Angular</span>
+                <span class="tech-pill">TypeScript</span>
+                <span class="tech-pill">RxJS</span>
+                <span class="tech-pill">Spring Boot</span>
+                <span class="tech-pill">REST APIs</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/yashtank09" target="_blank" rel="noopener noreferrer" class="btn-outline sm">
+                    <i class="devicon-github-plain"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+        <div class="project-visual">
+            <div class="project-mock">
+                <div class="mock-header">
+                    <span class="mock-dot red"></span>
+                    <span class="mock-dot yellow"></span>
+                    <span class="mock-dot green"></span>
+                    <span class="mock-title">trade-journal — Angular</span>
+                </div>
+                <div class="mock-body">
+                    <div class="code-line"><span class="c-purple">@Component</span>(&#123; selector: <span class="c-green">'app-journal'</span> &#125;)</div>
+                    <div class="code-line"><span class="c-blue">export class</span> <span class="c-yellow">JournalComponent</span> &#123;</div>
+                    <div class="code-line indent">trades$: Observable&lt;Trade[]&gt;;</div>
+                    <div class="code-line indent"><span class="c-blue">constructor</span>(<span class="c-blue">private</span> api: TradeService) &#123;</div>
+                    <div class="code-line indent2">this.trades$ = api.<span class="c-yellow">getAll</span>().<span class="c-yellow">pipe</span>(</div>
+                    <div class="code-line indent2">  <span class="c-yellow">map</span>(t =&gt; t.<span class="c-yellow">filter</span>(x =&gt; x.pnl &gt; 0))</div>
+                    <div class="code-line indent2">);</div>
+                    <div class="code-line indent">&#125;</div>
+                    <div class="code-line">&#125;</div>
+                </div>
+                <div class="mock-tags">
+                    <span>Angular</span><span>RxJS</span><span>TypeScript</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-divider"></div>
+
+    <!-- Project 3: Open Source (image-left) -->
+    <div class="project-row" id="project-fintech">
+        <div class="project-visual">
+            <div class="project-mock project-mock--fintech">
+                <div class="mock-header">
+                    <span class="mock-dot red"></span>
+                    <span class="mock-dot yellow"></span>
+                    <span class="mock-dot green"></span>
+                    <span class="mock-title">open-source — FinTech</span>
+                </div>
+                <div class="mock-body">
+                    <div class="code-line"><span class="c-muted">// Apache Fineract — Contribution</span></div>
+                    <div class="code-line"><span class="c-blue">public class</span> <span class="c-yellow">LoanScheduleEngine</span> &#123;</div>
+                    <div class="code-line indent"><span class="c-blue">public</span> Schedule <span class="c-yellow">generate</span>(LoanRequest r) &#123;</div>
+                    <div class="code-line indent2"><span class="c-muted">// Optimized amortization logic</span></div>
+                    <div class="code-line indent2"><span class="c-blue">return</span> new Schedule(<span class="c-green">"Fineract v1.9"</span>);</div>
+                    <div class="code-line indent">&#125;</div>
+                    <div class="code-line">&#125;</div>
+                    <div class="code-line empty"></div>
+                    <div class="code-line"><span class="c-muted">// Zerodha API integration —</span></div>
+                    <div class="code-line"><span class="c-blue">zerodha</span>.<span class="c-yellow">kite</span>.<span class="c-yellow">connect</span>(<span class="c-green">"api_key"</span>);</div>
+                </div>
+                <div class="mock-tags">
+                    <span>Apache Fineract</span><span>Zerodha</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-content">
+            <span class="project-category open-source">Open-Source Contribution</span>
+            <h3 class="project-title">Open-Source FinTech Ecosystem</h3>
+            <p class="project-desc">
+                Active contributor to leading open-source financial technology platforms.
+                Focused on extending the core capabilities of <strong>Apache Fineract</strong>
+                and building robust tooling around the <strong>Zerodha</strong> ecosystem —
+                empowering a global developer community of financial innovators with reliable,
+                battle-tested infrastructure.
+            </p>
+            <div class="project-tech">
+                <span class="tech-pill">Apache Fineract</span>
+                <span class="tech-pill">Zerodha API</span>
+                <span class="tech-pill">Java</span>
+                <span class="tech-pill">Spring Boot</span>
+                <span class="tech-pill">FinTech</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/yashtank09" target="_blank" rel="noopener noreferrer" class="btn-outline sm">
+                    <i class="devicon-github-plain"></i> View Contributions
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- GitHub CTA -->
+<div class="section CTA-section" id="github-cta-section">
+    <div class="container">
+        <div class="github-cta">
+            <i class="devicon-github-plain github-cta-icon"></i>
+            <h3>More on <span class="title-serif">GitHub</span></h3>
+            <p>Explore more of my projects, experiments, and open-source work.</p>
+            <a href="https://github.com/yashtank09" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                Visit GitHub Profile
+            </a>
+        </div>
+    </div>
 </div>

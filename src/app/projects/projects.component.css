@@ -1,22 +1,318 @@
+/* ══════════════════════════════════════════
+   PROJECTS PAGE STYLES — MINIMALIST THEME
+   ══════════════════════════════════════════ */
+
 .container {
     width: var(--container-width);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
-.repo-cards {
-    box-shadow: 4px 8px darkgray;
-    padding: 10px;
-    margin: 10px;
+.section {
+    padding: var(--section-padding) 0;
 }
 
-.repo-cards .repo-description{
-    padding-top: 10px;
-    height: 100px;
+/* ── Utilities ──────────────────────────── */
+.btn-primary {
+    display: inline-block;
+    padding: 0.8rem 1.9rem;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--bg-primary);
+    background: var(--ink-primary);
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow var(--transition-2), transform var(--transition-2), background var(--transition-2);
+    border: 1px solid var(--ink-primary);
 }
 
-.repo-cards .card-title-link {
-    padding: 8px;
+.btn-primary:hover {
+    background: var(--ink-secondary);
+    border-color: var(--ink-secondary);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
-.repo-cards .repo-icons{
-    padding-right: 10px;
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.8rem 1.9rem;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--ink-secondary);
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color var(--transition-2), color var(--transition-2), transform var(--transition-2), box-shadow var(--transition-2);
+}
+
+.btn-outline:hover {
+    border-color: var(--ink-primary);
+    color: var(--ink-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-outline.sm {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.85rem;
+}
+
+
+/* ══════════════════════════════════════════
+   PROJECT ROW (Alternating Layout)
+   ══════════════════════════════════════════ */
+
+.project-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.project-row.reversed {
+    direction: rtl;
+}
+
+.project-row.reversed > * {
+    direction: ltr;
+}
+
+.project-divider {
+    height: 1px;
+    background: var(--border-base);
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* ── Project Content ───────────────────── */
+.project-category {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-navy);
+    background: var(--accent-navy-light);
+    border: 1px solid rgba(30, 58, 138, 0.15);
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 1.25rem;
+}
+
+.project-category.open-source {
+    color: #065F46; /* Deep Emerald for OS/Fintech */
+    background: #ECFDF5;
+    border-color: #A7F3D0;
+}
+
+.project-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    color: var(--ink-primary);
+    margin-bottom: 1rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    color: var(--ink-secondary);
+    line-height: 1.85;
+    margin-bottom: 1.75rem;
+}
+
+.project-desc strong {
+    color: var(--ink-primary);
+    font-weight: 600;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 2.25rem;
+}
+
+.tech-pill {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ink-secondary);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-base);
+    padding: 5px 12px;
+    border-radius: 100px;
+    transition: border-color var(--transition-2), color var(--transition-2);
+}
+
+.tech-pill:hover {
+    color: var(--ink-primary);
+    border-color: var(--border-strong);
+}
+
+/* ── Code Mock Window ──────────────────── */
+.project-mock {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform var(--transition-2), box-shadow var(--transition-2);
+    font-family: 'Courier New', monospace;
+    background: #111827; /* Keeping code window dark for code syntax highlighting contrast */
+    color: #F9FAFB;
+    border: 1px solid #374151;
+    box-shadow: var(--shadow-md);
+}
+
+.project-mock:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.mock-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #1F2937;
+    border-bottom: 1px solid #374151;
+    padding: 12px 16px;
+}
+
+.mock-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.mock-dot.red    { background: #EF4444; }
+.mock-dot.yellow { background: #F59E0B; }
+.mock-dot.green  { background: #10B981; }
+
+.mock-title {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+    font-family: var(--font-body);
+    margin-left: 6px;
+    font-weight: 500;
+}
+
+.mock-body {
+    padding: 1.5rem;
+    font-size: 0.82rem;
+    line-height: 2;
+}
+
+.code-line {
+    display: block;
+}
+
+.code-line.empty {
+    height: 1em;
+}
+
+.code-line.indent  { padding-left: 1.4em; }
+.code-line.indent2 { padding-left: 2.8em; }
+
+/* Subtle muted coding palette */
+.c-purple { color: #C084FC; } /* Annotations */
+.c-blue   { color: #60A5FA; } /* Keywords */
+.c-yellow { color: #FCD34D; } /* Methods/Classes */
+.c-green  { color: #6EE7B7; } /* Strings */
+.c-muted  { color: #9CA3AF; font-style: italic; } /* Comments */
+
+.mock-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 12px 16px;
+    border-top: 1px solid #374151;
+    background: #1F2937;
+}
+
+.mock-tags span {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #93C5FD;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-family: var(--font-body);
+}
+
+
+/* ── GitHub CTA ────────────────────────── */
+.CTA-section {
+    border-top: 1px solid var(--border-base);
+}
+
+.github-cta {
+    text-align: center;
+    padding: 5rem 2rem;
+    border-radius: 16px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-strong);
+    box-shadow: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.github-cta-icon {
+    font-size: 2.5rem;
+    color: var(--ink-secondary);
+    display: block;
+    margin-bottom: 1.25rem;
+}
+
+.github-cta h3 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--ink-primary);
+    margin-bottom: 0.75rem;
+}
+
+.github-cta p {
+    color: var(--ink-secondary);
+    margin-bottom: 2.25rem;
+    font-size: 1rem;
+}
+
+
+/* ── Responsive ─────────────────────────── */
+@media (max-width: 900px) {
+    .project-row,
+    .project-row.reversed {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 3rem;
+        padding: 3rem 0;
+    }
+
+    .project-mock {
+        min-height: unset;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-hero {
+        padding-top: 8rem;
+    }
+    .project-title {
+        font-size: 1.65rem;
+    }
+    .github-cta {
+        padding: 3rem 1.5rem;
+    }
 }

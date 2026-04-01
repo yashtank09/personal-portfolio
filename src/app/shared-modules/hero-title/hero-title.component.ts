@@ -6,5 +6,8 @@ import { Attribute, Component, Input } from '@angular/core';
   styleUrls: ['./hero-title.component.css']
 })
 export class HeroTitleComponent {
+  @Input('hero-eyebrow') heroEyebrow: string = "";
   @Input('hero-title') heroTitle: string = "";
+  @Input('hero-serif') heroSerif: string = "";
+  @Input('hero-sub') heroSub: string = "";
 }

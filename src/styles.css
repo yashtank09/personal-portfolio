@@ -1,63 +1,167 @@
-/* You can add global styles to this file, and also import other style files */
+/* ============================================
+   GLOBAL DESIGN SYSTEM — YASH TANK PORTFOLIO
+   Minimalist & Elegant Theme v2
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
+    /* ── Color Palette (Solid Colors Only) ──── */
+    --bg-primary:       #FAFAF8;   /* Warm white / alabaster */
+    --bg-secondary:     #F4F3EF;   /* Soft off-white for section alternation */
+    --bg-card:          #FFFFFF;   /* Pure white cards */
+    --bg-card-hover:    #F8F8F6;   /* Subtle card hover state */
+    --bg-dark:          #1A1A1A;   /* Near-black for CTA sections */
 
-    /*
-     * Color Properties
-     */
-    --vanilla: hsla(44, 81%, 77%, 1);
-    --light-blue: hsla(197, 49%, 78%, 1);
-    --sky-blue: hsla(195, 48%, 65%, 1);
-    --alabaster: hsla(34, 30%, 91%, 1);
-    --timberwolf: hsla(10, 8%, 85%, 1);
-    --pacific-cyan: hsla(196, 56%, 56%, 1);
-    --boston-blue: #428bca;
-    --space-cadet: hsl(214, 81%, 8%);
-    --white: hsl(0, 0%, 100%);
-    --white-smoke: whitesmoke;
+    --ink-primary:      #18181B;   /* Charcoal — primary text & headings */
+    --ink-secondary:    #52525B;   /* Medium slate — body text */
+    --ink-muted:        #A1A1AA;   /* Muted — labels, captions */
+    --ink-inverse:      #FAFAF8;   /* Text on dark backgrounds */
 
+    --accent-navy:      #1E3A8A;   /* Primary solid Navy Accent */
+    --accent-navy-light:#EFF6FF;   /* Soft Navy background for active tabs/cards */
 
-    /*
-     * Transitions
-     */
-    --transition-1: 0.05s ease;
-    --transition-2: 0.25s ease;
-    --cubic-out: cubic-bezier(0.33, 0.85, 0.56, 1.02);
+    --accent:           #1E3A8A;   /* Redirect general accent to the new Navy */
+    --accent-light:     #3B82F6;   /* Action blue for hover interactions */
 
-    /* 
-     * Spacing
-     */
-    --container-width: 75%;
-    --section-padding: 60px;
+    --border-base:      #E4E4E7;   /* Default border */
+    --border-strong:    #D4D4D8;   /* Stronger border for emphasis */
 
-    /* 
-     * Shadow
-     */
-    --shadow: 0 -5px 10px var(--timberwolf);
+    --white:            #FFFFFF;
 
-    /**
-     * transition
-     */
+    /* ── Legacy aliases (keep for existing components) ── */
+    --bg-obsidian:      var(--bg-primary);
+    --bg-card-legacy:   var(--bg-card);
+    --boston-blue:      var(--accent);
+    --space-cadet:      var(--bg-primary);
+    --vanilla:          var(--accent);
+    --light-blue:       var(--accent);
+    --sky-blue:         var(--accent);
+    --alabaster:        var(--ink-primary);
+    --timberwolf:       var(--border-base);
+    --pacific-cyan:     var(--accent);
+    --accent-blue:      var(--accent);
+    --accent-purple:    var(--accent-light);
+    --text-primary:     var(--ink-primary);
+    --text-secondary:   var(--ink-secondary);
+    --text-muted:       var(--ink-muted);
+    --border-subtle:    var(--border-base);
 
-    --transition-1: 0.05s ease;
-    --transition-2: 0.25s ease;
-    --cubic-out: cubic-bezier(0.33, 0.85, 0.56, 1.02);
+    /* ── Typography ────────────────────────── */
+    --font-display:     'Playfair Display', Georgia, serif;
+    --font-body:        'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    --font-heading:     'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    --gill-sanserif:    var(--font-body);
+    --courier-new:      'Courier New', monospace;
 
-    /**
-     * Fonts families
-     */
-    --gill-sanserif: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    --courier-new: 'Courier New', Courier, monospace;
+    /* ── Spacing ───────────────────────────── */
+    --container-width:  82%;
+    --section-padding:  100px;
+
+    /* ── Transitions ───────────────────────── */
+    --transition-1:     0.15s ease;
+    --transition-2:     0.25s ease;
+    --cubic-out:        cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    /* ── Shadows (No Glow — Soft & Natural) ── */
+    --shadow-xs:        0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-sm:        0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow:           0 4px 16px rgba(0, 0, 0, 0.07);
+    --shadow-md:        0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow-lg:        0 16px 40px rgba(0, 0, 0, 0.10);
+
+    /* Legacy shadow aliases */
+    --glow-blue:        var(--shadow-md);
+    --glow-purple:      var(--shadow-md);
+}
+
+/* ── Reset & Base ─────────────────────────── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: var(--bg-primary);
+    color: var(--ink-primary);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body p {
     font-size: 1rem;
-    font-style: inherit;
-    line-height: 1.75;
-    letter-spacing: 0.2px;
+    line-height: 1.8;
+    letter-spacing: 0.1px;
+    color: var(--ink-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--ink-primary);
+    line-height: 1.2;
+}
+
+a {
+    color: var(--ink-primary);
+    text-decoration: none;
+    transition: var(--transition-2);
+}
+
+a:hover {
+    color: var(--ink-secondary);
+}
+
+/* ── Legacy Glassmorphism Utility (neutralized) */
+.glass {
+    background: var(--bg-card);
+    border: 1px solid var(--border-base);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* ── Gradient Text (now just ink) ──────────── */
+.gradient-text {
+    color: var(--ink-primary);
+    font-style: italic;
+}
+
+/* ── Section Badge ──────────────────────────── */
+.section-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-secondary);
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+/* ── Scrollbar ──────────────────────────────── */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ink-muted);
 }

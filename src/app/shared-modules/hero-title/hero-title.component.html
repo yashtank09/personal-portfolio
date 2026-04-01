@@ -1,6 +1,7 @@
-<!-- Hero -->
-<div class="hero">
+<div class="page-hero">
     <div class="container">
-        <h1>{{ heroTitle }}</h1>
+        <span class="section-eyebrow" *ngIf="heroEyebrow">{{ heroEyebrow }}</span>
+        <h1>{{ heroTitle }} <span class="title-serif" *ngIf="heroSerif">{{ heroSerif }}</span></h1>
+        <p class="hero-sub" *ngIf="heroSub">{{ heroSub }}</p>
     </div>
 </div>

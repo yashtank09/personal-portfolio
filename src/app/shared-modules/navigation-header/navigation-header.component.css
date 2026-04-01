@@ -1,66 +1,133 @@
-/* Header */
+/* ══════════════════════════════════════════
+   NAVIGATION HEADER — MINIMALIST THEME
+   ══════════════════════════════════════════ */
 
 header {
-    position: inherit;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 5;
-    padding: 0px 0;
-}
-
-
-header .navbar-brand {
-    color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    font-weight: 800;
-    font-size: 1.8rem;
-}
-
-header .navbar-brand.absolute {
-    position: absolute;
-}
-
-@media (max-width: 999px) {
-    header .navbar-brand.absolute {
-        position: relative;
-    }
-}
-
-header .navbar-brand span {
-    color: #fff;
-}
-
-@media (min-width: 768px) {
-    header .navbar-brand span {
-        color: #ced4da;
-    }
+    z-index: 1000;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 header .navbar {
-    background: var(--space-cadet) !important;
+    background: var(--bg-card) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-base);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    padding: 0.85rem 0;
+    transition: all 0.3s ease;
 }
 
-@media (min-width: 768px) {
-    header .navbar {
-        padding-top: 0;
-        padding-bottom: 0;
-        background: var(--space-cadet) !important;
-        position: relative;
-    }
+/* ── Logo ───────────────────────────────── */
+header .navbar-brand {
+    color: var(--ink-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    font-size: 1.6rem;
+    font-family: var(--font-heading);
+    transition: opacity 0.3s ease, color 0.3s ease;
 }
 
+header .navbar-brand:hover {
+    opacity: 0.8;
+    color: var(--accent-navy);
+}
+
+/* ── Nav Links ──────────────────────────── */
 header .navbar .nav-link-section {
-    padding: 1rem 1rem;
+    padding: 0.6rem 0.9rem;
+    position: relative;
 }
 
 header .navbar .nav-link {
     outline: none !important;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: var(--font-body);
+    color: var(--ink-secondary) !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 4px;
 }
 
-header[_ngcontent-ng-c1435824420] .navbar[_ngcontent-ng-c1435824420] .nav-link-section[_ngcontent-ng-c1435824420] {
-    padding: 1.2rem 0.8rem;
+/* Accent Navy underline animation on hover */
+header .navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--accent-navy);
+    border-radius: 2px;
+    transition: width 0.35s ease;
+}
+
+header .navbar .nav-link:hover {
+    color: var(--ink-primary) !important;
+}
+
+header .navbar .nav-link:hover::after,
+header .navbar .nav-link.active::after {
+    width: 100%;
+}
+
+header .navbar .nav-link.active {
+    color: var(--accent-navy) !important;
+    font-weight: 600;
+}
+
+/* ── Resume Button ───────────────────────── */
+header .navbar .btn-resume {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+    color: var(--accent-navy) !important;
+    background: var(--accent-navy-light);
+    border: 1px solid transparent;
+    padding: 0.55rem 1.4rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+header .navbar .btn-resume:hover {
+    background: var(--accent-navy);
+    color: var(--bg-primary) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ── Mobile Toggler ─────────────────────── */
+header .navbar-toggler {
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    padding: 5px 9px;
+    background: var(--bg-card);
+}
+
+header .navbar-toggler-icon {
+    /* Muted icon for light theme */
+    filter: invert(0.3);
+}
+
+/* Collapsed mobile nav */
+@media (max-width: 767px) {
+    header .navbar-collapse {
+        background: var(--bg-card);
+        border: 1px solid var(--border-base);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        box-shadow: var(--shadow-md);
+    }
 }
