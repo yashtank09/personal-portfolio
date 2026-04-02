@@ -36,26 +36,14 @@ jobs:
       url: "https://yashtank09.github.io"
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          repository: 'yashtank09/yashtank09.github.io'
-          ref: 'main'
-          token: ${{ secrets.GH_TOK }}
-
       - name: Download production build
         uses: actions/download-artifact@v4
         with:
           name: prod-build
+          path: ./dist
 
       - name: Deploy to production
-        run: |
-          git config user.name 'yashtank09'
-          git config user.email 'yashtank09@gmail.com'
-          git add .
-          git commit -m "Deploy production build."
-          git push origin main
-
-      - name: Grant access to deploy token (optional)
-        run: echo "Token authentication..." 
-        env:
-          ACCESS_TOKEN: ${{ secrets.GH_TOK }}
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
