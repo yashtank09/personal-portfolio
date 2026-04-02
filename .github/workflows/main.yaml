@@ -9,10 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Use Node.js 18.16.0
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18.16.0
 
@@ -23,7 +23,7 @@ jobs:
         run: npm run build --prod
 
       - name: Archive production build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: prod-build
           path: dist/
@@ -36,14 +36,14 @@ jobs:
       url: "https://yashtank09.github.io"
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: 'yashtank09/yashtank09.github.io'
           ref: 'main'
           token: ${{ secrets.GH_TOK }}
 
       - name: Download production build
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: prod-build
 
