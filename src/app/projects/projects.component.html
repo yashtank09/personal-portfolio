@@ -1,10 +1,10 @@
 <!-- Hero -->
-<yt-hero hero-eyebrow="My Work" hero-title="Featured" hero-serif="Projects" hero-sub="A curated selection of enterprise systems, full-stack applications, and open-source contributions."></yt-hero>
+<yt-hero hero-eyebrow="Selected Work" hero-title="Problems I've" hero-serif="Built For" hero-sub="A selection of product, full-stack, and real-time systems that reflect how I approach engineering."></yt-hero>
 
 <!-- Featured Projects -->
 <div class="section container" id="featured-projects">
 
-    <!-- Project 1: Enterprise Architecture (image-left) -->
+    <!-- Project 1: Product data platform (image-left) -->
     <div class="project-row" id="project-microservices">
         <div class="project-visual">
             <div class="project-mock">
@@ -12,7 +12,7 @@
                     <span class="mock-dot red"></span>
                     <span class="mock-dot yellow"></span>
                     <span class="mock-dot green"></span>
-                    <span class="mock-title">microservices-gateway</span>
+                    <span class="mock-title">product-data-service</span>
                 </div>
                 <div class="mock-body">
                     <div class="code-line"><span class="c-purple">@RestController</span></div>
@@ -30,13 +30,12 @@
             </div>
         </div>
         <div class="project-content">
-            <span class="project-category">Enterprise Architecture</span>
-            <h3 class="project-title">Scalable Microservices Ecosystem</h3>
+            <span class="project-category">Product Engineering</span>
+            <h3 class="project-title">Product Intelligence Platform</h3>
             <p class="project-desc">
-                Architected and delivered highly scalable backend frameworks capable of processing
-                heavy-duty data transactions. Focused on stringent security protocols, optimal
-                routing, and maintainable enterprise logic — built to handle thousands of
-                concurrent requests without breaking a sweat.
+                Contributed to a product-data platform that collects, processes, and exposes competitive
+                information through web applications and APIs. My work has included microservice-based
+                processing flows, customer-facing product features, and subscription-plan business rules.
             </p>
             <div class="project-tech">
                 <span class="tech-pill">Java</span>
@@ -46,9 +45,7 @@
                 <span class="tech-pill">Microservices</span>
             </div>
             <div class="project-links">
-                <a href="https://github.com/yashtank09" target="_blank" rel="noopener noreferrer" class="btn-outline sm">
-                    <i class="devicon-github-plain"></i> View on GitHub
-                </a>
+                <a routerLink="/contact" class="btn-outline sm">Discuss this work</a>
             </div>
         </div>
     </div>
@@ -61,10 +58,9 @@
             <span class="project-category">Full-Stack Application</span>
             <h3 class="project-title">Trade Journal</h3>
             <p class="project-desc">
-                A premium algorithmic journaling and analytics dashboard built for precision.
-                Engineered with Angular to provide traders with real-time metrics, complex
-                interactive charting, and a seamless data visualization experience — helping
-                traders make smarter, data-driven decisions.
+                A full-stack journal for recording trades, reviewing performance, and turning trading
+                history into useful feedback. The project brings together Angular state and UI work,
+                API integration, data modelling, and analytics-oriented presentation.
             </p>
             <div class="project-tech">
                 <span class="tech-pill">Angular</span>
@@ -74,9 +70,7 @@
                 <span class="tech-pill">REST APIs</span>
             </div>
             <div class="project-links">
-                <a href="https://github.com/yashtank09" target="_blank" rel="noopener noreferrer" class="btn-outline sm">
-                    <i class="devicon-github-plain"></i> View on GitHub
-                </a>
+                <a routerLink="/contact" class="btn-outline sm">Ask about the project</a>
             </div>
         </div>
         <div class="project-visual">
@@ -107,7 +101,7 @@
 
     <div class="project-divider"></div>
 
-    <!-- Project 3: Open Source (image-left) -->
+    <!-- Project 3: Live broadcasting platform (image-left) -->
     <div class="project-row" id="project-fintech">
         <div class="project-visual">
             <div class="project-mock project-mock--fintech">
@@ -115,46 +109,40 @@
                     <span class="mock-dot red"></span>
                     <span class="mock-dot yellow"></span>
                     <span class="mock-dot green"></span>
-                    <span class="mock-title">open-source — FinTech</span>
+                    <span class="mock-title">live-broadcast-console</span>
                 </div>
                 <div class="mock-body">
-                    <div class="code-line"><span class="c-muted">// Apache Fineract — Contribution</span></div>
-                    <div class="code-line"><span class="c-blue">public class</span> <span class="c-yellow">LoanScheduleEngine</span> &#123;</div>
-                    <div class="code-line indent"><span class="c-blue">public</span> Schedule <span class="c-yellow">generate</span>(LoanRequest r) &#123;</div>
-                    <div class="code-line indent2"><span class="c-muted">// Optimized amortization logic</span></div>
-                    <div class="code-line indent2"><span class="c-blue">return</span> new Schedule(<span class="c-green">"Fineract v1.9"</span>);</div>
+                    <div class="code-line"><span class="c-purple">@Component</span>(&#123; selector: <span class="c-green">'broadcast-console'</span> &#125;)</div>
+                    <div class="code-line"><span class="c-blue">export class</span> <span class="c-yellow">BroadcastConsole</span> &#123;</div>
+                    <div class="code-line indent">streamState = <span class="c-green">'ready'</span>;</div>
+                    <div class="code-line indent"><span class="c-yellow">startEvent</span>() &#123;</div>
+                    <div class="code-line indent2"><span class="c-muted">// Coordinate platform and OBS workflow</span></div>
+                    <div class="code-line indent2">this.streamState = <span class="c-green">'live'</span>;</div>
                     <div class="code-line indent">&#125;</div>
                     <div class="code-line">&#125;</div>
-                    <div class="code-line empty"></div>
-                    <div class="code-line"><span class="c-muted">// Zerodha API integration —</span></div>
-                    <div class="code-line"><span class="c-blue">zerodha</span>.<span class="c-yellow">kite</span>.<span class="c-yellow">connect</span>(<span class="c-green">"api_key"</span>);</div>
                 </div>
                 <div class="mock-tags">
-                    <span>Apache Fineract</span><span>Zerodha</span>
+                    <span>AngularJS</span><span>OBS</span><span>Live Streaming</span>
                 </div>
             </div>
         </div>
         <div class="project-content">
-            <span class="project-category open-source">Open-Source Contribution</span>
-            <h3 class="project-title">Open-Source FinTech Ecosystem</h3>
+            <span class="project-category open-source">Real-time Systems</span>
+            <h3 class="project-title">Live Broadcasting Platform</h3>
             <p class="project-desc">
-                Active contributor to leading open-source financial technology platforms.
-                Focused on extending the core capabilities of <strong>Apache Fineract</strong>
-                and building robust tooling around the <strong>Zerodha</strong> ecosystem —
-                empowering a global developer community of financial innovators with reliable,
-                battle-tested infrastructure.
+                Developed and supported a web-based broadcasting platform for education, corporate
+                events, and annual general meetings. The role combined AngularJS development, OBS
+                workflow customization, client communication, and calm troubleshooting during live events.
             </p>
             <div class="project-tech">
-                <span class="tech-pill">Apache Fineract</span>
-                <span class="tech-pill">Zerodha API</span>
-                <span class="tech-pill">Java</span>
-                <span class="tech-pill">Spring Boot</span>
-                <span class="tech-pill">FinTech</span>
+                <span class="tech-pill">AngularJS</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">OBS</span>
+                <span class="tech-pill">Live Streaming</span>
+                <span class="tech-pill">Client Support</span>
             </div>
             <div class="project-links">
-                <a href="https://github.com/yashtank09" target="_blank" rel="noopener noreferrer" class="btn-outline sm">
-                    <i class="devicon-github-plain"></i> View Contributions
-                </a>
+                <a routerLink="/experience" class="btn-outline sm">View experience</a>
             </div>
         </div>
     </div>
@@ -167,7 +155,7 @@
         <div class="github-cta">
             <i class="devicon-github-plain github-cta-icon"></i>
             <h3>More on <span class="title-serif">GitHub</span></h3>
-            <p>Explore more of my projects, experiments, and open-source work.</p>
+            <p>Explore my public repositories, learning projects, and engineering experiments.</p>
             <a href="https://github.com/yashtank09" target="_blank" rel="noopener noreferrer" class="btn-primary">
                 Visit GitHub Profile
             </a>
