@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastModule } from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageService } from 'primeng/api';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MessageService } from 'primeng/api';
     AchievementsComponent,
     ContactComponent,
     EducationComponent,
-    ProjectsComponent    
+    ProjectsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
