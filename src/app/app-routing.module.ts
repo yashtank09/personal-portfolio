@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,7 @@ const routes: Routes = [
   }, {
     path: 'contact', component: ContactComponent
   }, {
-    path: '**', pathMatch: 'full', component: HomePageComponent
+    path: '**', pathMatch: 'full', component: NotFoundComponent
   }
 ];
 

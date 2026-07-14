@@ -23,13 +23,13 @@ jobs:
         run: npm install
 
       - name: Build production package
-        run: npm run build
+        run: npm run prerender
 
       - name: Archive production build
         uses: actions/upload-artifact@v4
         with:
           name: prod-build
-          path: dist/
+          path: dist/browser/
 
   deploy:
     runs-on: ubuntu-latest

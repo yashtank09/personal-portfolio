@@ -4,6 +4,8 @@
 /tmp
 /out-tsc
 /bazel-out
+/dist/browser
+/dist/server
 
 # Node
 /node_modules
