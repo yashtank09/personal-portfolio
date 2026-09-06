@@ -316,3 +316,5 @@
         padding: 3rem 1.5rem;
     }
 }
+.project-features { color: var(--ink-secondary); line-height: 1.8; padding-left: 1.25rem; margin-bottom: 1.75rem; }
+.project-row > * { min-width: 0; }
