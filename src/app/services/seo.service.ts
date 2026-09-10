@@ -18,12 +18,12 @@ export class SeoService {
   private readonly pages: Record<string, PageSeo> = {
     '/': {
       title: 'Yash Tank | Full-Stack Software Engineer',
-      description: 'Portfolio of Yash Tank, a full-stack software engineer building maintainable applications with Java, Spring Boot, Angular, TypeScript, SQL, and microservices.',
+      description: 'Yash Tank has 5+ years of professional experience, including 3+ years in software engineering with Java, Spring Boot, Angular, REST APIs, automation, and AI integrations.',
       schemaType: 'ProfilePage'
     },
     '/about': {
       title: 'About Yash Tank | Full-Stack Software Engineer',
-      description: 'Learn about Yash Tank, his software engineering approach, education, and strengths across Java, Spring Boot, Angular, SQL, and microservices.',
+      description: 'Learn about Yash Tank, his backend engineering strengths, education, engineering mindset, and exploration of Spring AI, RAG, and AI agents.',
       schemaType: 'AboutPage'
     },
     '/education': {
@@ -33,12 +33,12 @@ export class SeoService {
     },
     '/experience': {
       title: 'Software Engineering Experience | Yash Tank',
-      description: 'Professional experience of Yash Tank across Java, Spring Boot, Angular, microservices, product-data platforms, and live broadcasting systems.',
+      description: 'Yash Tank worked as a Software Engineer at DataCrops Software Pvt. Ltd. from April 2023 to August 2026 and as a Jr. Streaming Engineer at Epitome Solutions from January 2021 to January 2023.',
       schemaType: 'WebPage'
     },
     '/projects': {
       title: 'Software Engineering Projects | Yash Tank',
-      description: 'Selected full-stack, product-data, and real-time software projects by Yash Tank using Java, Spring Boot, Angular, TypeScript, SQL, and REST APIs.',
+      description: 'Explore Sievex, Trade Journal, and InstaSend: projects by Yash Tank spanning web crawling, AI integration, trading analytics, and email automation.',
       schemaType: 'CollectionPage'
     },
     '/contact': {
@@ -123,8 +123,8 @@ export class SeoService {
           jobTitle: 'Full-Stack Software Engineer',
           url: `${this.siteUrl}/`,
           image: this.imageUrl,
-          description: 'Full-stack software engineer specializing in Java, Spring Boot, Angular, SQL, REST APIs, and microservices.',
-          knowsAbout: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'SQL', 'Microservices', 'REST APIs', 'Full-Stack Development'],
+          description: 'Software engineer with 5+ years of professional experience, including 3+ years in software engineering with Java, Spring Boot, Angular, backend systems, automation, and AI integrations.',
+          knowsAbout: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'SQL', 'Microservices', 'REST APIs', 'Full-Stack Development', 'Automation', 'Spring AI', 'RAG', 'AI Agents', 'MySQL', 'Redis'],
           sameAs: [
             'https://www.linkedin.com/in/tyjtank',
             'https://github.com/yashtank09',
