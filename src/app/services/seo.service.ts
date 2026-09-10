@@ -18,7 +18,7 @@ export class SeoService {
   private readonly pages: Record<string, PageSeo> = {
     '/': {
       title: 'Yash Tank | Full-Stack Software Engineer',
-      description: 'Yash Tank is a software engineer with 3+ years of production experience in Java, Spring Boot, Angular, backend systems, automation, and AI-integrated applications.',
+      description: 'Yash Tank has 5+ years of professional experience, including 3+ years in software engineering with Java, Spring Boot, Angular, REST APIs, automation, and AI integrations.',
       schemaType: 'ProfilePage'
     },
     '/about': {
@@ -33,7 +33,7 @@ export class SeoService {
     },
     '/experience': {
       title: 'Software Engineering Experience | Yash Tank',
-      description: 'Yash Tank is a Software Engineer at DataCrops Software Pvt. Ltd. since April 2023, previously a Jr. Streaming Engineer at Epitome Solutions from January 2021 to January 2023.',
+      description: 'Yash Tank worked as a Software Engineer at DataCrops Software Pvt. Ltd. from April 2023 to August 2026 and as a Jr. Streaming Engineer at Epitome Solutions from January 2021 to January 2023.',
       schemaType: 'WebPage'
     },
     '/projects': {
@@ -123,7 +123,7 @@ export class SeoService {
           jobTitle: 'Full-Stack Software Engineer',
           url: `${this.siteUrl}/`,
           image: this.imageUrl,
-          description: 'Software engineer with 3+ years of production experience in Java, Spring Boot, Angular, backend systems, and automation, exploring Generative AI integration.',
+          description: 'Software engineer with 5+ years of professional experience, including 3+ years in software engineering with Java, Spring Boot, Angular, backend systems, automation, and AI integrations.',
           knowsAbout: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'SQL', 'Microservices', 'REST APIs', 'Full-Stack Development', 'Automation', 'Spring AI', 'RAG', 'AI Agents', 'MySQL', 'Redis'],
           sameAs: [
             'https://www.linkedin.com/in/tyjtank',
