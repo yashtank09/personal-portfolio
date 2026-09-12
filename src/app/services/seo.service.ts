@@ -4,6 +4,8 @@ import { Meta, Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
+import { PROJECT_CASE_STUDIES } from '../projects/project-case-studies';
+
 interface PageSeo {
   title: string;
   description: string;
@@ -17,12 +19,12 @@ export class SeoService {
   private readonly imageUrl = `${this.siteUrl}/assets/imaages/profile.jpeg`;
   private readonly pages: Record<string, PageSeo> = {
     '/': {
-      title: 'Yash Tank | Full-Stack Software Engineer',
-      description: 'Yash Tank has 5+ years of professional experience, including 3+ years in software engineering with Java, Spring Boot, Angular, REST APIs, automation, and AI integrations.',
+      title: 'Yash Tank | Software Engineer (Java Full Stack)',
+      description: 'Yash Tank, Java full-stack software engineer with 3+ years in software engineering. Explore Spring Boot and Angular projects, experience and contact details.',
       schemaType: 'ProfilePage'
     },
     '/about': {
-      title: 'About Yash Tank | Full-Stack Software Engineer',
+      title: 'About Yash Tank | Software Engineer (Java Full Stack)',
       description: 'Learn about Yash Tank, his backend engineering strengths, education, engineering mindset, and exploration of Spring AI, RAG, and AI agents.',
       schemaType: 'AboutPage'
     },
@@ -32,20 +34,21 @@ export class SeoService {
       schemaType: 'CollectionPage'
     },
     '/experience': {
-      title: 'Software Engineering Experience | Yash Tank',
+      title: 'Experience | Yash Tank',
       description: 'Yash Tank worked as a Software Engineer at DataCrops Software Pvt. Ltd. from April 2023 to August 2026 and as a Jr. Streaming Engineer at Epitome Solutions from January 2021 to January 2023.',
       schemaType: 'WebPage'
     },
     '/projects': {
-      title: 'Software Engineering Projects | Yash Tank',
+      title: 'Projects | Yash Tank',
       description: 'Explore Sievex, Trade Journal, and InstaSend: projects by Yash Tank spanning web crawling, AI integration, trading analytics, and email automation.',
       schemaType: 'CollectionPage'
     },
     '/contact': {
-      title: 'Contact Yash Tank | Software Engineering Opportunities',
+      title: 'Contact Me | Yash Tank',
       description: 'Contact Yash Tank to discuss full-stack software engineering roles, product development, Java, Spring Boot, Angular, and backend opportunities.',
       schemaType: 'ContactPage'
     },
+    ...Object.fromEntries(PROJECT_CASE_STUDIES.map(project => [`/projects/${project.slug}`, { title: project.title, description: project.description, schemaType: 'WebPage' as const }])),
     '/404': {
       title: 'Page Not Found | Yash Tank',
       description: 'The requested page could not be found.',
@@ -69,7 +72,7 @@ export class SeoService {
   }
 
   private applyForUrl(rawUrl: string): void {
-    const path = rawUrl.split('?')[0].split('#')[0] || '/';
+    const path = rawUrl.split('?')[0].split('#')[0].replace(/\/+$/, '') || '/';
     const page = this.pages[path] ?? this.pages['/404'];
     const canonicalUrl = path === '/' ? `${this.siteUrl}/` : `${this.siteUrl}${path}`;
 
@@ -85,6 +88,7 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:description', content: page.description });
     this.meta.updateTag({ property: 'og:url', content: canonicalUrl });
     this.meta.updateTag({ property: 'og:type', content: 'website' });
+    this.meta.updateTag({ property: 'og:site_name', content: 'Yash Tank' });
     this.meta.updateTag({ property: 'og:image', content: this.imageUrl });
     this.meta.updateTag({ property: 'og:image:alt', content: 'Yash Tank, Full-Stack Software Engineer' });
     this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
@@ -120,7 +124,7 @@ export class SeoService {
           '@type': 'Person',
           '@id': `${this.siteUrl}/#person`,
           name: 'Yash Tank',
-          jobTitle: 'Full-Stack Software Engineer',
+          jobTitle: 'Software Engineer (Java Full Stack)',
           url: `${this.siteUrl}/`,
           image: this.imageUrl,
           description: 'Software engineer with 5+ years of professional experience, including 3+ years in software engineering with Java, Spring Boot, Angular, backend systems, automation, and AI integrations.',
@@ -137,7 +141,8 @@ export class SeoService {
           '@type': 'WebSite',
           '@id': `${this.siteUrl}/#website`,
           url: `${this.siteUrl}/`,
-          name: 'Yash Tank Portfolio',
+          name: 'Yash Tank',
+          alternateName: 'Yash Tank Portfolio',
           publisher: { '@id': `${this.siteUrl}/#person` }
         },
         {
@@ -147,7 +152,9 @@ export class SeoService {
           name: page.title,
           description: page.description,
           isPartOf: { '@id': `${this.siteUrl}/#website` },
-          mainEntity: { '@id': `${this.siteUrl}/#person` }
+          ...(page.schemaType === 'ProfilePage' || page.schemaType === 'AboutPage'
+            ? { mainEntity: { '@id': `${this.siteUrl}/#person` } }
+            : { author: { '@id': `${this.siteUrl}/#person` } })
         }
       ]
     });

@@ -25,6 +25,6 @@ describe('AppComponent', () => {
   it('should set the home page SEO title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    expect(document.title).toBe('Yash Tank | Full-Stack Software Engineer');
+    expect(document.title).toBe('Yash Tank | Software Engineer (Java Full Stack)');
   });
 });

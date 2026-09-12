@@ -133,7 +133,10 @@
               "/education",
               "/experience",
               "/projects",
-              "/contact"
+              "/contact",
+              "/projects/sievex",
+              "/projects/trade-journal",
+              "/projects/instasend"
             ]
           }
         },
