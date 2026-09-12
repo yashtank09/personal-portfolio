@@ -1,0 +1,16 @@
+.case-study { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; color: var(--ink-primary); }
+nav { font-size: .9rem; color: var(--ink-secondary); margin-bottom: 40px; }
+a { color: var(--accent-navy); text-underline-offset: 4px; }
+header { padding-bottom: 32px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .1em; font-size: .8rem; color: var(--ink-secondary); }
+h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 7vw, 4rem); margin: 12px 0 24px; }
+h2 { font-size: 1.4rem; margin-bottom: 18px; }
+.summary { font-size: 1.15rem; }
+p, li { line-height: 1.8; }
+.stack { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin-top: 24px; }
+.stack li { background: var(--accent-navy-light); color: var(--accent-navy); padding: 4px 12px; border-radius: 4px; font-size: .85rem; }
+section, footer { padding: 28px 0; border-top: 1px solid var(--border-base); }
+ol { padding-left: 24px; }
+ol li { padding-left: 8px; margin-bottom: 12px; }
+.case-links { display: flex; flex-wrap: wrap; gap: 20px; }
+@media (max-width: 480px) { .case-study { padding: 28px 20px 48px; } .case-links { flex-direction: column; gap: 16px; } }

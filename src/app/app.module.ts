@@ -20,6 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageService } from 'primeng/api';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+import { ProjectCaseStudyComponent } from './projects/project-case-study.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +34,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ContactComponent,
     EducationComponent,
     ProjectsComponent,
+    ProjectCaseStudyComponent,
     NotFoundComponent
   ],
   imports: [

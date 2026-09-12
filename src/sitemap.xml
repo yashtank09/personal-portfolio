@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://yashtank.co.in/</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-12</lastmod>
   </url>
   <url>
     <loc>https://yashtank.co.in/about</loc>
@@ -14,14 +14,26 @@
   </url>
   <url>
     <loc>https://yashtank.co.in/experience</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-12</lastmod>
   </url>
   <url>
     <loc>https://yashtank.co.in/projects</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-12</lastmod>
   </url>
   <url>
     <loc>https://yashtank.co.in/contact</loc>
     <lastmod>2026-07-14</lastmod>
+  </url>
+  <url>
+    <loc>https://yashtank.co.in/projects/sievex</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://yashtank.co.in/projects/trade-journal</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://yashtank.co.in/projects/instasend</loc>
+    <lastmod>2026-09-12</lastmod>
   </url>
 </urlset>
