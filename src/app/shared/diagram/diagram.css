@@ -1,0 +1,67 @@
+figure {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  padding: 24px;
+  margin-block: 22px;
+}
+figcaption {
+  color: var(--muted);
+  font-size: 9px;
+}
+ol {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  margin: 23px 0 0;
+}
+li {
+  flex: 1;
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 15px 10px;
+  min-width: 0;
+}
+li span {
+  display: block;
+  font-size: 9px;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+strong {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+  display: block;
+}
+b {
+  position: absolute;
+  right: -14px;
+  top: 36%;
+  z-index: 1;
+  color: var(--accent);
+  font-weight: 400;
+}
+@media (max-width: 600px) {
+  ol {
+    flex-direction: column;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  li span {
+    margin: 0;
+  }
+  b {
+    right: 50%;
+    top: auto;
+    bottom: -18px;
+    transform: rotate(90deg);
+  }
+  strong {
+    font-size: 12px;
+  }
+}

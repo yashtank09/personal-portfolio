@@ -1,0 +1,41 @@
+<yt-page-header
+  label="Writing"
+  eyebrow="ENGINEERING NOTES"
+  [title]="article.title"
+  [description]="article.description"
+/>
+<div class="meta">
+  <a routerLink="/about">Yash Tank · Software Engineer</a>
+  <time [attr.datetime]="article.publishedAt">{{article.publishedAt}}</time>
+  <span>{{time}} min read</span>
+</div>
+<div class="article-layout">
+  <nav aria-label="Article contents">
+    <p class="eyebrow">ON THIS PAGE</p>
+    @for(section of article.sections;track section.id){
+    <a [href]="'/blog/'+article.slug+'/#'+section.id">{{section.title}}</a>
+    }
+  </nav>
+  <article class="prose">
+    @for(section of article.sections;track section.id){
+    <section [id]="section.id">
+      <h2>{{section.title}}</h2>
+      @for(paragraph of section.paragraphs;track $index){
+      <p>{{paragraph}}</p>
+      }@if(section.code){
+      <yt-code-block [code]="section.code" />
+      }@if(section.diagram){
+      <yt-diagram [steps]="section.diagram" />
+      }
+    </section>
+    }
+  </article>
+</div>
+@if(related.length){
+<section class="section">
+  <h2>Related writing</h2>
+  @for(item of related;track item.slug){
+  <p><a [routerLink]="['/blog',item.slug]">{{item.title}}</a></p>
+  }
+</section>
+}

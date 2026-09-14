@@ -1,0 +1,113 @@
+:host {
+  display: block;
+  height: 100%;
+}
+article {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.visual {
+  padding: 18px 23px;
+  background: var(--soft);
+  border-bottom: 1px solid var(--line);
+  min-height: 235px;
+}
+.visual-top {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 8px;
+}
+.symbol {
+  display: block;
+  font: 76px/1 var(--serif);
+  color: var(--accent);
+  text-align: center;
+  margin: 13px 0 18px;
+}
+.flow {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.flow span {
+  font: 9px/1.4 var(--mono);
+  padding: 10px 8px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  text-align: center;
+}
+.caption {
+  font-size: 7px;
+  text-align: center;
+  margin-top: 16px;
+  color: var(--muted);
+}
+.copy {
+  padding: 28px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.eyebrow {
+  font-size: 8px;
+  margin-bottom: 12px;
+}
+h3 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+h3 a {
+  display: flex;
+  justify-content: space-between;
+}
+.copy > p {
+  font-size: 13px;
+}
+.challenge {
+  margin-block: 24px;
+  padding-left: 14px;
+  border-left: 2px solid var(--accent);
+}
+.challenge span {
+  font-size: 8px;
+  color: var(--accent);
+}
+.challenge p {
+  font-size: 12px;
+  margin-top: 6px;
+}
+.chips {
+  margin-bottom: 22px;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 11px;
+  padding-top: 20px;
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 500px) {
+  .copy {
+    padding: 22px;
+  }
+  .visual {
+    padding: 18px 14px;
+    min-height: 220px;
+  }
+  .flow {
+    gap: 6px;
+  }
+  .flow span {
+    font-size: 8px;
+    padding: 8px 6px;
+  }
+  .text-link {
+    gap: 8px;
+  }
+}

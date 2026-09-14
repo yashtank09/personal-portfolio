@@ -1,0 +1,43 @@
+:host {
+  display: block;
+}
+.crumbs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 26px;
+  font-size: 11px;
+  color: var(--muted);
+}
+header {
+  padding: 55px 0 45px;
+  border-bottom: 1px solid var(--line);
+}
+h1 {
+  max-width: 950px;
+  margin-bottom: 24px;
+}
+.lead {
+  max-width: 800px;
+}
+header .eyebrow {
+  margin-bottom: 18px;
+}
+.header-content {
+  margin-top: 26px;
+}
+.header-content:empty {
+  display: none;
+}
+@media (max-width: 540px) {
+  header {
+    padding: 38px 0;
+  }
+  h1 {
+    font-size: 43px;
+    overflow-wrap: anywhere;
+  }
+  .lead {
+    font-size: 20px;
+  }
+}

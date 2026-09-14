@@ -1,0 +1,45 @@
+<article>
+  <div class="visual">
+    <div class="visual-top mono">
+      <span>SYSTEM OVERVIEW</span>
+      <span>0{{number()}}</span>
+    </div>
+    <span class="symbol" aria-hidden="true">
+      {{project().slug==='trade-journal'?'↗':project().slug==='sievex'?'✳':'⇢'}}
+    </span>
+    <div class="flow">
+      @for(step of project().pipeline.slice(1,4);track step){
+      <span>{{step}}</span>
+      }
+    </div>
+    <p class="caption mono">CONCEPTUAL FLOW · NOT A PRODUCT SCREENSHOT</p>
+  </div>
+  <div class="copy">
+    <p class="eyebrow">{{project().category}}</p>
+    <h3>
+      <a [routerLink]="['/projects',project().slug]">
+        {{project().name}}
+        <span aria-hidden="true">↗</span>
+      </a>
+    </h3>
+    <p>{{project().description}}</p>
+    <div class="challenge">
+      <span class="mono">ENGINEERING FOCUS</span>
+      <p>{{project().challenge}}</p>
+    </div>
+    <div class="chips">
+      @for(t of project().stack;track t){
+      <span class="chip">{{t}}</span>
+      }
+    </div>
+    <div class="links">
+      <a class="text-link" [routerLink]="['/projects',project().slug]">
+        Explore case study
+        <span aria-hidden="true">→</span>
+      </a>
+      @if(project().repo){
+      <a [href]="project().repo">GitHub ↗</a>
+      }
+    </div>
+  </div>
+</article>

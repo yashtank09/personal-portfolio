@@ -1,0 +1,37 @@
+<header [class.compact]="compact()">
+  <div class="nav-shell">
+    <a class="brand" routerLink="/" aria-label="Yash Tank home">
+      <span class="mark" aria-hidden="true">
+        yt
+        <span>.</span>
+      </span>
+      <span>Yash Tank</span>
+    </a>
+    <button
+      id="menu-toggle"
+      class="menu"
+      type="button"
+      [attr.aria-expanded]="open()"
+      aria-controls="primary-navigation"
+      (click)="open.set(!open())"
+    >
+      {{open() ? 'Close −' : 'Menu +'}}
+    </button>
+    <nav id="primary-navigation" aria-label="Main navigation" [class.open]="open()">
+      @for(link of links;track link[0]){
+      <a
+        [routerLink]="link[1]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}"
+        ariaCurrentWhenActive="page"
+      >
+        {{link[0]}}
+      </a>
+      }
+    </nav>
+    <a class="resume" routerLink="/resume">
+      Résumé
+      <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</header>

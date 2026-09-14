@@ -1,0 +1,361 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 65px;
+  padding: 80px 0 66px;
+}
+h1 {
+  line-height: 1.065;
+}
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.hero-description {
+  max-width: 485px;
+  margin: 25px 0 28px;
+  font-size: 15px;
+  line-height: 1.85;
+}
+.actions {
+  align-items: center;
+}
+.contact-link {
+  font-size: 12px;
+  padding: 8px 0;
+}
+.hero-links {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.ecosystem {
+  border: 1px solid var(--line);
+  background: var(--soft);
+  box-shadow: 8px 9px 0 var(--soft);
+  transform: rotate(-1deg);
+}
+.eco-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 20px;
+  border-bottom: 1px solid var(--line);
+  font-size: 8px;
+  color: var(--muted);
+}
+.bottom-bar {
+  border-top: 1px solid var(--line);
+  border-bottom: 0;
+  font-size: 7px;
+}
+.eco-canvas {
+  padding: 30px 25px;
+  background-image: radial-gradient(var(--line) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+.node {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.node > span {
+  font: 23px var(--mono);
+  color: var(--accent);
+}
+.node small {
+  font: 8px var(--mono);
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 8px;
+}
+.node strong {
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+}
+.node p {
+  font: 10px var(--mono);
+  margin-top: 8px;
+}
+.ui-node {
+  width: 82%;
+  margin: auto;
+}
+.core-node {
+  border-color: var(--accent);
+}
+.connector {
+  height: 48px;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+.connector:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background: var(--accent);
+  left: 50%;
+}
+.connector span {
+  margin-left: 105px;
+  font-size: 8px;
+  color: var(--muted);
+}
+.branch {
+  width: 52%;
+  height: 32px;
+  border: 1px solid var(--accent);
+  border-bottom: 0;
+  margin: 18px auto 0;
+  position: relative;
+}
+.branch:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 19px;
+  background: var(--accent);
+  left: 50%;
+  top: -19px;
+}
+.bottom-nodes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.bottom-nodes .node {
+  padding: 15px;
+}
+.bottom-nodes strong {
+  font-size: 11px;
+}
+.technology-strip {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  border-block: 1px solid var(--line);
+  padding: 25px 0;
+}
+.technology-strip > .mono {
+  font-size: 8px;
+  color: var(--muted);
+  padding-right: 25px;
+  border-right: 1px solid var(--line);
+}
+.technology-strip > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.approach {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 70px;
+}
+.approach .text-link {
+  margin-top: 25px;
+}
+.approach .intro {
+  font-size: 19px;
+  color: var(--ink);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+.approach p {
+  font-size: 14px;
+}
+.principles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  margin-top: 25px;
+  font-size: 9px;
+  color: var(--accent);
+}
+.all-projects {
+  margin-top: 28px;
+}
+.work-list > a {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+.work-list h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.work-list p {
+  font-size: 13px;
+}
+.work-list > a > span:last-child {
+  margin-left: auto;
+  font-size: 24px;
+}
+.work-list .mono {
+  color: var(--muted);
+}
+.writing {
+  padding: 30px;
+  border: 1px solid var(--line);
+  background: var(--soft);
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.writing > span {
+  font: 65px var(--serif);
+  letter-spacing: -5px;
+  color: var(--accent);
+}
+.writing h3 {
+  font-size: 24px;
+  margin-bottom: 13px;
+}
+.writing .eyebrow {
+  margin-bottom: 12px;
+  font-size: 9px;
+}
+.writing p {
+  font-size: 13px;
+}
+@media (max-width: 1000px) {
+  .hero {
+    gap: 35px;
+  }
+  .hero .button {
+    padding: 12px 17px;
+    gap: 18px;
+  }
+  .eco-canvas {
+    padding: 25px 18px;
+  }
+  .ui-node {
+    width: 90%;
+  }
+  .node {
+    padding: 16px 12px;
+  }
+  .node strong {
+    font-size: 12px;
+  }
+  .bottom-nodes .node {
+    padding: 13px 10px;
+  }
+  .approach {
+    gap: 35px;
+  }
+}
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding-top: 45px;
+  }
+  h1 {
+    font-size: clamp(44px, 8vw, 66px);
+  }
+  .ecosystem {
+    max-width: 560px;
+    width: 100%;
+    margin: auto;
+    transform: none;
+  }
+  .approach {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .technology-strip {
+    gap: 20px;
+  }
+  .technology-strip > div {
+    justify-content: start;
+    gap: 13px 23px;
+  }
+  .hero-description {
+    max-width: 570px;
+  }
+}
+@media (max-width: 450px) {
+  .hero {
+    gap: 36px;
+    padding-bottom: 40px;
+  }
+  h1 {
+    font-size: clamp(38px, 9.1vw, 45px);
+  }
+  .hero .eyebrow {
+    font-size: 9px;
+  }
+  .hero-description {
+    font-size: 14px;
+  }
+  .hero-links {
+    gap: 18px;
+    font-size: 10px;
+  }
+  .contact-link {
+    width: 100%;
+    padding-top: 5px;
+  }
+  .eco-canvas {
+    padding: 22px 14px;
+  }
+  .node p {
+    font-size: 9px;
+  }
+  .node strong {
+    font-size: 11px;
+  }
+  .node small {
+    font-size: 7px;
+  }
+  .node > span {
+    font-size: 20px;
+  }
+  .technology-strip > .mono {
+    font-size: 7px;
+    padding-right: 15px;
+  }
+  .technology-strip > div {
+    font-size: 11px;
+    gap: 12px 18px;
+  }
+  .work-list > a {
+    gap: 16px;
+  }
+  .work-list h3 {
+    font-size: 18px;
+  }
+  .work-list p {
+    font-size: 12px;
+  }
+  .writing {
+    padding: 24px;
+  }
+  .writing > span {
+    display: none;
+  }
+  .writing h3 {
+    font-size: 22px;
+  }
+}

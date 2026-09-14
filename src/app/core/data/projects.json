@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "trade-journal",
+    "name": "Trade Journal",
+    "category": "FINANCIAL DATA · FULL-STACK PRODUCT",
+    "tagline": "From raw executions to a clearer trading picture.",
+    "description": "A trading analytics platform that transforms broker executions into structured positions, P&L analytics, and actionable trading insights.",
+    "stack": ["Java 17", "Spring Boot", "Angular", "MySQL", "JWT"],
+    "repo": "https://github.com/yashtank09/trade-journal-monorepo",
+    "challenge": "Reconstructing positions from partial fills and FIFO execution matching.",
+    "problem": "Broker exports describe individual executions. A useful journal needs coherent positions, realized outcomes, and the decisions behind each trade. Partial closes and inconsistent input make that translation more than a simple import.",
+    "solution": "A structured processing pipeline cleans imported CSV/Excel executions, matches them into open and closed positions, and feeds analytics alongside trade plans, risk/reward tracking, notes, and psychology review.",
+    "architecture": "An Angular frontend connects to a Java 17 and Spring Boot modular monolith through REST APIs. The backend separates authentication, ingestion, trade processing, and analytics responsibilities, with MySQL persistence.",
+    "pipeline": [
+      "CSV / Excel + manual entry",
+      "Clean & normalize",
+      "FIFO position matching",
+      "P&L & risk metrics",
+      "Analytics & review"
+    ],
+    "features": [
+      "Broker CSV/Excel import and manual trade entry",
+      "Execution cleaning, duplicate detection, and normalization",
+      "FIFO matching, partial closes, and weighted exit prices",
+      "Realized P&L, equity curves, and performance analytics",
+      "Asset, strategy, and day-based performance analysis",
+      "Risk metrics, trade planning, and risk/reward tracking",
+      "Mistake tracking, notes, and trading psychology review",
+      "Authentication, authorization, and administration"
+    ],
+    "decisions": [
+      "Use a modular monolith to keep domain boundaries explicit without distributed deployment overhead.",
+      "Separate imported executions from derived positions so the domain model reflects how trades develop.",
+      "Keep calculations in the backend so analytics and the interface share one interpretation of outcomes."
+    ],
+    "considerations": [
+      "Treat repeat imports, partial fills, and chronological ordering as correctness concerns before optimizing throughput.",
+      "Review database access patterns and paginate historical records as the dataset grows.",
+      "Measure calculation cost before introducing precomputed summaries; cached analytics need explicit invalidation."
+    ],
+    "security": "Spring Security and JWT support authenticated access and authorization. Trade records and import operations need ownership checks at the API boundary. File validation, upload limits, and careful handling of broker data are important review areas.",
+    "learned": "The central engineering lesson is that the data model determines the quality of the analytics. Executions, positions, and trading decisions each need a clear place in the system. Correctness and explainable calculations come before a polished chart."
+  },
+  {
+    "slug": "sievex",
+    "name": "Sievex",
+    "category": "AUTOMATION · WEB DATA · AI",
+    "tagline": "Collect the web. Make the data useful.",
+    "description": "A configurable web-data automation platform for crawling, extraction, workflow execution, and AI-assisted exploration.",
+    "stack": ["Spring Boot", "Spring Security", "MySQL", "Spring AI", "LLM APIs"],
+    "repo": "https://github.com/yashtank09/Sievex-Application",
+    "challenge": "Connecting controlled crawling jobs with secure, contextual AI assistance.",
+    "problem": "Collecting web data is only one part of the workflow. Requests need validation, crawling needs controlled execution, and extracted information needs a useful way to be retrieved and explored.",
+    "solution": "Sievex connects configurable crawling jobs, extraction, and automation workflows with a contextual assistant that uses crawl results and conversation history for follow-up exploration.",
+    "architecture": "A modular Spring Boot backend organizes REST endpoints, secure access, request validation, crawler execution, data processing, and AI assistance. Collected data and conversation history provide context for the assistant.",
+    "pipeline": [
+      "Authenticate & validate",
+      "Configure job",
+      "Crawl & extract",
+      "Store & retrieve",
+      "Explore with AI"
+    ],
+    "features": [
+      "Secure authentication and role-based access",
+      "Validated requests and configurable crawling jobs",
+      "Web crawling and structured data extraction",
+      "Modular automation workflows",
+      "Controlled background processing",
+      "Retrieval of collected crawl data",
+      "Contextual AI assistance and conversation history",
+      "AI-assisted exploration of extracted information"
+    ],
+    "decisions": [
+      "Separate request validation from job execution so API and crawling responsibilities can evolve independently.",
+      "Organize crawling and automation as modules with explicit inputs and outputs.",
+      "Bring crawl data and conversation history into the assistant context for useful follow-up questions."
+    ],
+    "considerations": [
+      "Bound concurrent jobs and apply timeouts so slow remote pages do not consume all worker capacity.",
+      "Plan for retries, cancellation, and isolated failures when extending background execution.",
+      "Limit retrieved context and conversation length to control model latency and token cost as usage grows."
+    ],
+    "security": "Spring Security, JWT, and roles organize access. Crawling requests need URL validation; deployments should also review private-network restrictions and redirects. Extracted text is untrusted input and should remain separate from assistant instructions.",
+    "learned": "Automation is most useful when execution is predictable and results remain accessible. AI introduces a new boundary: retrieved content can inform an answer, but it should not control the application."
+  },
+  {
+    "slug": "instasend",
+    "name": "InstaSend",
+    "category": "EXPLORATORY PROJECT · EMAIL AUTOMATION",
+    "tagline": "Exploring reliable background email workflows.",
+    "description": "An exploratory Spring Boot project studying campaigns, scheduling, queued processing, and audit logging.",
+    "stack": ["Java", "Spring Boot", "MySQL", "REST APIs", "Scheduling"],
+    "repo": "",
+    "challenge": "Coordinating scheduled messages with background processing and an auditable history.",
+    "problem": "Email automation needs more than a send action: campaigns, scheduling, worker execution, and a record of what happened.",
+    "solution": "The project explores campaign management, address validation, scheduled messages, queues, background workers, audit logging, and soft deletes.",
+    "architecture": "A modular Spring Boot backend explores the boundaries between campaign management, scheduling, queue processing, and persistence.",
+    "pipeline": [
+      "Campaign setup",
+      "Validate addresses",
+      "Schedule & queue",
+      "Background workers",
+      "Audit history"
+    ],
+    "features": [
+      "Campaign management and email validation",
+      "Scheduling and queued work",
+      "Background processing",
+      "Audit logging and soft deletes"
+    ],
+    "decisions": [
+      "Keep scheduling separate from worker execution.",
+      "Treat campaign state and audit history as distinct responsibilities."
+    ],
+    "considerations": [
+      "Retry policy and duplicate delivery need explicit treatment before production use.",
+      "Measure worker throughput and queue growth before choosing concurrency limits."
+    ],
+    "security": "This is an exploration, not a production delivery claim. A deployed service would need protected credentials, recipient authorization, and access controls around campaign data.",
+    "learned": "The project is a way to study how scheduled work, background execution, and auditability fit together."
+  }
+]
