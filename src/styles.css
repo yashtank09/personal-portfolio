@@ -141,6 +141,8 @@ em {
   max-width: 300px;
 }
 .button {
+  /* Keep text and background contrast intact during hover and theme changes. */
+  transition: border-color var(--transition);
   display: inline-flex;
   align-items: center;
   justify-content: center;
