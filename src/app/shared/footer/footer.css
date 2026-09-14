@@ -1,0 +1,75 @@
+footer {
+  border-top: 1px solid var(--line);
+  padding-block: 32px 24px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 28px;
+  gap: 25px;
+}
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+.mark {
+  font: 32px var(--serif);
+  letter-spacing: -3px;
+  color: var(--accent);
+}
+small {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 400;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  font-size: 11px;
+}
+.bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 9px;
+}
+.preferences {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+button,
+select {
+  background: transparent;
+  color: var(--muted);
+  border: 0;
+  font-size: 9px;
+  padding: 6px 0;
+}
+label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .top,
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    gap: 18px;
+  }
+  .preferences {
+    gap: 20px;
+  }
+}

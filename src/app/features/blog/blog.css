@@ -1,0 +1,36 @@
+.empty {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  padding: 45px;
+  border: 1px solid var(--line);
+  background: var(--soft);
+}
+.empty > span {
+  font: 85px var(--serif);
+  letter-spacing: -7px;
+  color: var(--accent);
+}
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+p {
+  max-width: 650px;
+  font-size: 14px;
+}
+.text-link {
+  margin-top: 24px;
+}
+.entry {
+  padding: 30px;
+  border-bottom: 1px solid var(--line);
+}
+@media (max-width: 600px) {
+  .empty {
+    padding: 28px;
+  }
+  .empty > span {
+    display: none;
+  }
+}

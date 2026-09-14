@@ -1,0 +1,7 @@
+node_modules
+dist
+.angular
+tmp
+qa
+package-lock.json
+

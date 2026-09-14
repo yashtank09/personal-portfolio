@@ -1,0 +1,99 @@
+<yt-page-header
+  [label]="project.name"
+  [eyebrow]="project.category"
+  [title]="project.name"
+  [description]="project.tagline"
+>
+  <div class="actions">
+    @if(project.repo){
+    <a class="button primary" [href]="project.repo">View GitHub repository ↗</a>
+    }
+  </div>
+</yt-page-header>
+<div class="case-layout">
+  <aside>
+    <nav aria-label="Case study contents">
+      <p class="eyebrow">IN THIS CASE STUDY</p>
+      @for(section of sections;track section[0]){
+      <a [href]="'/projects/'+project.slug+'/#'+section[0]">{{section[1]}}</a>
+      }
+    </nav>
+  </aside>
+  <div class="prose">
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>{{project.description}}</p>
+      <div class="chips">
+        @for(t of project.stack;track t){
+        <span class="chip">{{t}}</span>
+        }
+      </div>
+    </section>
+    <section id="problem">
+      <h2>The problem</h2>
+      <p>{{project.problem}}</p>
+    </section>
+    <section id="solution">
+      <h2>The solution</h2>
+      <p>{{project.solution}}</p>
+    </section>
+    <section id="architecture">
+      <h2>Architecture & data flow</h2>
+      <p>{{project.architecture}}</p>
+      <yt-diagram [steps]="project.pipeline" [label]="project.name+' · conceptual architecture'" />
+      <h3>The engineering challenge</h3>
+      <p>{{project.challenge}}</p>
+    </section>
+    <section id="features">
+      <h2>Key features</h2>
+      <ul>
+        @for(feature of project.features;track feature){
+        <li>{{feature}}</li>
+        }
+      </ul>
+    </section>
+    <section id="decisions">
+      <h2>Design decisions</h2>
+      <ul>
+        @for(decision of project.decisions;track decision){
+        <li>{{decision}}</li>
+        }
+      </ul>
+    </section>
+    <section id="performance">
+      <h2>Performance considerations</h2>
+      <p>Areas to evaluate as the workload grows; no benchmark results are claimed.</p>
+      <ul>
+        @for(point of project.considerations;track point){
+        <li>{{point}}</li>
+        }
+      </ul>
+    </section>
+    <section id="security">
+      <h2>Security boundaries</h2>
+      <p>{{project.security}}</p>
+    </section>
+    <section id="screenshots">
+      <h2>A look at the product</h2>
+      @for(image of project.screenshots??[];track image.src){
+      <yt-screenshot
+        [title]="project.name"
+        [src]="image.src"
+        [alt]="image.alt"
+        [width]="image.width"
+        [height]="image.height"
+      />
+      }@empty{
+      <yt-screenshot [title]="project.name+' · workspace'" />
+      }
+    </section>
+    <section id="learning">
+      <h2>What I learned</h2>
+      <p>{{project.learned}}</p>
+      @if(project.repo){
+      <a [href]="project.repo">Explore the source on GitHub ↗</a>
+      }
+    </section>
+  </div>
+</div>
+<yt-cta />

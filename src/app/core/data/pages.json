@@ -1,0 +1,65 @@
+[
+  {
+    "path": "",
+    "label": "Home",
+    "title": "Yash Tank | Software Engineer | Java, Spring Boot & Angular",
+    "description": "Yash Tank is a Software Engineer building scalable backend systems, modern Angular applications, REST APIs, automation, and AI-powered solutions.",
+    "kind": "ProfilePage"
+  },
+  {
+    "path": "about",
+    "label": "About",
+    "title": "About Yash Tank | Software Engineer",
+    "description": "Meet Yash Tank: Java and Spring Boot engineering, career background, practical software architecture, and continuous learning.",
+    "kind": "ProfilePage"
+  },
+  {
+    "path": "experience",
+    "label": "Experience",
+    "title": "Engineering Experience | Yash Tank",
+    "description": "Yash Tank’s work at DataCrops and Epitome: production APIs, performance optimization, automation, full-stack delivery, and reliable live systems.",
+    "kind": "WebPage"
+  },
+  {
+    "path": "skills",
+    "label": "Engineering toolkit",
+    "title": "Engineering Toolkit | Yash Tank",
+    "description": "Yash Tank’s engineering capabilities across Java, Spring Boot, Angular, databases, caching, architecture, DevOps, and practical AI integration.",
+    "kind": "WebPage"
+  },
+  {
+    "path": "projects",
+    "label": "Projects",
+    "title": "Software Engineering Projects | Yash Tank",
+    "description": "Explore Trade Journal, Sievex, and InstaSend: trading analytics, web-data automation, AI-assisted exploration, and background processing.",
+    "kind": "CollectionPage"
+  },
+  {
+    "path": "resume",
+    "label": "Résumé",
+    "title": "Yash Tank Résumé | Software Engineer",
+    "description": "Read Yash Tank’s professional résumé, engineering experience, education, technical strengths, and projects, or download the PDF.",
+    "kind": "ProfilePage"
+  },
+  {
+    "path": "education",
+    "label": "Education",
+    "title": "Education & Certifications | Yash Tank",
+    "description": "Yash Tank’s MCA and BCA education and University of Michigan Python and Django specializations on Coursera.",
+    "kind": "CollectionPage"
+  },
+  {
+    "path": "contact",
+    "label": "Contact",
+    "title": "Contact Yash Tank | Software Engineer",
+    "description": "Contact Yash Tank about software engineering roles, Java and Angular products, backend systems, automation, and technical collaboration.",
+    "kind": "ContactPage"
+  },
+  {
+    "path": "blog",
+    "label": "Writing",
+    "title": "Engineering Writing | Yash Tank",
+    "description": "A space for Yash Tank’s future technical writing on backend engineering, Java, Angular, software architecture, automation, and AI.",
+    "kind": "CollectionPage"
+  }
+]

@@ -1,0 +1,42 @@
+<yt-page-header
+  label="Résumé"
+  eyebrow="YASH TANK / SOFTWARE ENGINEER / INDIA"
+  title="Experience that builds useful software."
+  description="3+ years of professional software engineering experience across Java, Spring Boot, Angular, APIs, automation, and data-intensive applications."
+>
+  <div class="actions">
+    <a class="button primary" [href]="site.resume" download>Download PDF résumé ↓</a>
+    <a class="button" [href]="site.resume" target="_blank" rel="noopener noreferrer">Open PDF ↗</a>
+  </div>
+</yt-page-header>
+<section class="section prose">
+  <h2>Professional summary</h2>
+  <p>
+    Software Engineer focused on scalable backend systems, modern web applications, and practical
+    automation. Experienced in production REST APIs, full-stack modules, subscriptions, payment
+    integrations, SQL optimization, caching, and release support.
+  </p>
+  <p>
+    <a [href]="'mailto:'+site.email">{{site.email}}</a>
+    ·
+    <a [href]="site.github">GitHub</a>
+    ·
+    <a [href]="site.linkedin">LinkedIn</a>
+  </p>
+</section>
+<section class="section">
+  <h2>Professional experience</h2>
+  <yt-timeline />
+</section>
+<section class="section">
+  <div class="section-heading"><h2>Engineering toolkit</h2></div>
+  <yt-toolkit />
+</section>
+<section class="section prose">
+  <h2>Selected projects</h2>
+  @for(project of projects;track project.slug){
+  <h3><a [routerLink]="['/projects',project.slug]">{{project.name}}</a></h3>
+  <p>{{project.description}}</p>
+  }
+</section>
+<yt-education-list />

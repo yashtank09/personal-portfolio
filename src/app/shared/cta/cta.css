@@ -1,0 +1,31 @@
+:host {
+  display: block;
+}
+section {
+  padding-block: var(--space);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+h2 {
+  font-size: clamp(40px, 4.8vw, 64px);
+  margin-bottom: 24px;
+}
+p:not(.eyebrow) {
+  font-size: 13px;
+  max-width: 530px;
+}
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 13px;
+}
+@media (max-width: 700px) {
+  section {
+    align-items: start;
+    flex-direction: column;
+    gap: 28px;
+  }
+}

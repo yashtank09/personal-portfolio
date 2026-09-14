@@ -1,0 +1,33 @@
+section {
+  padding-block: 30px;
+}
+h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+article {
+  display: flex;
+  gap: 35px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+h3 {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+p {
+  font-size: 14px;
+}
+.mono {
+  color: var(--accent);
+  padding-top: 5px;
+}
+.text-link {
+  margin-top: 15px;
+}
+@media (max-width: 500px) {
+  article {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

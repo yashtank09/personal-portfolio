@@ -1,0 +1,210 @@
+<section class="hero">
+  <div>
+    <p class="eyebrow">
+      <span class="dot"></span>
+      YASH TANK / SOFTWARE ENGINEER
+    </p>
+    <h1 tabindex="-1">
+      I build scalable
+      <br />
+      software systems
+      <br />
+      and
+      <em>products.</em>
+    </h1>
+    <p class="hero-description">
+      Java, Spring Boot, and Angular. I build reliable APIs, practical web applications, automation,
+      and AI-powered systems.
+    </p>
+    <div class="actions">
+      <a class="button primary" routerLink="/projects">
+        View projects
+        <span aria-hidden="true">↘</span>
+      </a>
+      <a class="button" routerLink="/resume">
+        View résumé
+        <span aria-hidden="true">↗</span>
+      </a>
+      <a class="contact-link" routerLink="/contact">Contact me →</a>
+    </div>
+    <div class="hero-links">
+      <a [href]="site.github">GitHub ↗</a>
+      <a [href]="site.linkedin">LinkedIn ↗</a>
+      <span>Based in India</span>
+    </div>
+  </div>
+  <div class="ecosystem">
+    <div class="eco-bar mono">
+      <span>THE ENGINEERING IN BETWEEN</span>
+      <span class="dot"></span>
+    </div>
+    <div class="eco-canvas">
+      <div class="node ui-node">
+        <span aria-hidden="true">◫</span>
+        <div>
+          <small>EXPERIENCE LAYER</small>
+          <strong>Modern web applications</strong>
+          <p>Angular · TypeScript</p>
+        </div>
+      </div>
+      <div class="connector"><span class="mono">REST / JSON</span></div>
+      <div class="node core-node">
+        <span aria-hidden="true">{{'{ }'}}</span>
+        <div>
+          <small>APPLICATION CORE</small>
+          <strong>Reliable backend systems</strong>
+          <p>Java · Spring Boot · Security</p>
+        </div>
+      </div>
+      <div class="branch"></div>
+      <div class="bottom-nodes">
+        <div class="node">
+          <div>
+            <small>DATA</small>
+            <strong>Persistence</strong>
+            <p>SQL · Redis</p>
+          </div>
+        </div>
+        <div class="node">
+          <div>
+            <small>INTELLIGENCE</small>
+            <strong>Automation & AI</strong>
+            <p>Spring AI · LLMs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="eco-bar bottom-bar mono">
+      <span>01 / ARCHITECTURE FIRST</span>
+      <span>MADE TO WORK.</span>
+    </div>
+  </div>
+</section>
+<div class="technology-strip">
+  <span class="mono">
+    BUILT WITH
+    <br />
+    PURPOSE
+  </span>
+  <div>
+    @for(tech of technologies;track tech){
+    <span>{{tech}}</span>
+    }
+  </div>
+</div>
+<section class="section approach">
+  <div>
+    <p class="eyebrow">01 / THE APPROACH</p>
+    <h2>
+      Good software starts
+      <br />
+      with
+      <em>clear thinking.</em>
+    </h2>
+    <a class="text-link" routerLink="/about">A little more about me ↗</a>
+  </div>
+  <div>
+    <p class="intro">
+      I enjoy the work behind the interface: shaping a domain, designing a useful API, and making a
+      system faster, simpler, and easier to maintain.
+    </p>
+    <p>
+      With 3+ years of professional software engineering experience, I build practical software
+      around clear architecture, reliability, and the people who use and maintain it.
+    </p>
+    <div class="principles mono">
+      <span>+ Clarity over complexity</span>
+      <span>+ Built for change</span>
+      <span>+ Performance matters</span>
+    </div>
+  </div>
+</section>
+<section class="section" id="projects">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">02 / SELECTED PROJECTS</p>
+      <h2>Real problems. Thoughtful systems.</h2>
+    </div>
+    <p>The products I’m building and the engineering decisions behind them.</p>
+  </div>
+  <div class="two-column">
+    @for(project of projects;track project.slug;let i=$index){
+    <yt-project-card [project]="project" [number]="i+1" />
+    }
+  </div>
+  <a class="text-link all-projects" routerLink="/projects">All projects & explorations →</a>
+</section>
+<section class="section">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">03 / EXPERIENCE</p>
+      <h2>Engineering in practice.</h2>
+    </div>
+    <a class="text-link" routerLink="/experience">Explore experience ↗</a>
+  </div>
+  <yt-timeline />
+</section>
+<section class="section">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">04 / ENGINEERING TOOLKIT</p>
+      <h2>The right tools for the problem.</h2>
+    </div>
+    <a class="text-link" routerLink="/skills">Explore capabilities ↗</a>
+  </div>
+  <yt-toolkit />
+</section>
+<section class="section">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">05 / UNDER THE HOOD</p>
+      <h2>Smaller pieces. Meaningful engineering.</h2>
+    </div>
+  </div>
+  <div class="work-list">
+    <a routerLink="/projects/trade-journal" fragment="architecture">
+      <span class="mono">01</span>
+      <div>
+        <h3>Execution-to-position pipelines</h3>
+        <p>Data normalization, FIFO matching, and explainable analytics.</p>
+      </div>
+      <span aria-hidden="true">↗</span>
+    </a>
+    <a routerLink="/projects/sievex" fragment="architecture">
+      <span class="mono">02</span>
+      <div>
+        <h3>Secure automation workflows</h3>
+        <p>Validated requests, modular crawling, and controlled job execution.</p>
+      </div>
+      <span aria-hidden="true">↗</span>
+    </a>
+    <a routerLink="/projects/sievex" fragment="features">
+      <span class="mono">03</span>
+      <div>
+        <h3>Context-aware AI integration</h3>
+        <p>Connecting retrieved web data with conversational assistance.</p>
+      </div>
+      <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</section>
+<section class="section">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">06 / WRITING</p>
+      <h2>Notes from the engineering desk.</h2>
+    </div>
+    <a class="text-link" routerLink="/blog">Visit writing ↗</a>
+  </div>
+  <div class="writing">
+    <span aria-hidden="true">Aa</span>
+    <div>
+      <p class="eyebrow">A SPACE TO SHARE WHAT I LEARN</p>
+      <h3>Backend systems, architecture, and practical AI.</h3>
+      <p>
+        Technical writing will appear here when it’s ready. No articles have been published yet.
+      </p>
+    </div>
+  </div>
+</section>
+<yt-cta />

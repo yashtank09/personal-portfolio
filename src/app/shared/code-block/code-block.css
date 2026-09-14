@@ -1,0 +1,26 @@
+.code {
+  background: #1b251b;
+  color: #e9eedf;
+  border: 1px solid #3b4a35;
+  margin-block: 24px;
+}
+.code > div {
+  padding: 10px 18px;
+  border-bottom: 1px solid #3b4a35;
+  color: #b9c8ac;
+}
+pre {
+  margin: 0;
+  padding: 22px;
+  overflow: auto;
+  font: 12px/1.8 var(--mono);
+}
+.comment {
+  color: #a7b79b;
+}
+.string {
+  color: #e4c99d;
+}
+.keyword {
+  color: #bdd798;
+}

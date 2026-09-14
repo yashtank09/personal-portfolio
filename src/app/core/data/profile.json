@@ -1,0 +1,93 @@
+{
+  "experience": [
+    {
+      "company": "DataCrops Software Pvt Ltd",
+      "role": "Software Engineer",
+      "dates": "Apr 2023 — Aug 2026",
+      "points": [
+        "Delivered production REST APIs and full-stack modules with Java, Spring Boot, Angular, and MySQL across subscriptions, payments, data processing, and internal applications.",
+        "Improved application performance by approximately 40% through SQL optimization, API response tuning, and caching.",
+        "Reduced code redundancy by approximately 25% through reusable components, OOP, and design patterns.",
+        "Built DOM parsing, URL validation, custom crawling, and automation workflows. Supported staging deployments, regression testing, release validation, and production support."
+      ]
+    },
+    {
+      "company": "Epitome Solutions Pvt Ltd",
+      "role": "Jr. Streaming Engineer",
+      "dates": "Jan 2021 — Jan 2023",
+      "points": [
+        "Delivered reliable live streaming for educational, corporate, and government events.",
+        "Diagnosed real-time audio/video pipeline issues, developing a practical understanding of reliability under time pressure."
+      ]
+    }
+  ],
+  "site": {
+    "name": "Yash Tank",
+    "url": "https://yashtank.co.in",
+    "email": "yashtank09@gmail.com",
+    "github": "https://github.com/yashtank09",
+    "linkedin": "https://www.linkedin.com/in/tyjtank",
+    "resume": "/assets/resume/yash-tank-resume-september-2026.pdf",
+    "description": "Yash Tank is a Software Engineer specializing in Java, Spring Boot, Angular, REST APIs, automation, scalable backend systems, and AI-powered applications."
+  },
+  "technologies": [
+    "Java",
+    "Spring Boot",
+    "Angular",
+    "PostgreSQL",
+    "MySQL",
+    "Redis",
+    "Docker",
+    "REST APIs",
+    "Spring AI"
+  ],
+  "toolkit": [
+    {
+      "name": "Backend engineering",
+      "icon": "{ }",
+      "items": [
+        "Java 17",
+        "Spring Boot",
+        "Spring MVC",
+        "Spring Security",
+        "Spring Data JPA",
+        "Hibernate",
+        "REST APIs",
+        "JWT Authentication"
+      ]
+    },
+    {
+      "name": "Frontend development",
+      "icon": "</>",
+      "items": ["Angular", "TypeScript", "JavaScript", "HTML", "CSS"]
+    },
+    {
+      "name": "Data & persistence",
+      "icon": "≡",
+      "items": ["PostgreSQL", "MySQL", "Redis", "SQL optimization"]
+    },
+    {
+      "name": "System architecture",
+      "icon": "⌘",
+      "items": ["Microservices", "Modular Monolith", "API Design", "Design Patterns", "OOP"]
+    },
+    {
+      "name": "AI engineering",
+      "icon": "✳",
+      "items": [
+        "Spring AI",
+        "LLM APIs",
+        "RAG",
+        "AI Agents",
+        "Prompt Engineering",
+        "Conversational Memory",
+        "Python"
+      ]
+    },
+    {
+      "name": "Infrastructure & delivery",
+      "icon": ">_",
+      "items": ["Docker", "Maven", "Git", "Linux", "CI/CD"]
+    }
+  ]
+}

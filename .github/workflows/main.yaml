@@ -1,59 +1,33 @@
-name: Build and Deploy My Portfolio
-
+name: Angular portfolio checks
 on:
+  pull_request:
   push:
-    branches:
-      - main
-
+    branches: [main]
 permissions:
-  contents: write
-
+  contents: read
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Use Node.js 18.16.0
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18.16.0
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build production package
-        run: npm run prerender
-
-      - name: Archive production build
-        uses: actions/upload-artifact@v4
-        with:
-          name: prod-build
-          path: dist/browser/
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: prod
-      url: "https://yashtank09.github.io"
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          repository: 'yashtank09/yashtank09.github.io'
-          ref: 'main'
-          token: ${{ secrets.GH_TOK }}
-
-      - name: Download production build
-        uses: actions/download-artifact@v4
-        with:
-          name: prod-build
-
-      - name: Deploy to production
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build:prod
+      - run: npx playwright install --with-deps chromium
+      - name: Verify production routes and accessibility
+        env:
+          BROWSER_CHANNEL: chromium
         run: |
-          git config user.name 'yashtank09'
-          git config user.email 'yashtank09@gmail.com'
-          git add .
-          git commit -m "Deploy production build."
-          git push origin main
+          npm run preview > /tmp/portfolio-preview.log 2>&1 &
+          curl --retry 10 --retry-delay 1 --retry-connrefused --fail http://localhost:4300/ > /dev/null
+          npm run verify
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portfolio-validation
+          path: qa/

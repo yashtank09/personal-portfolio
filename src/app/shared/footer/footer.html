@@ -1,0 +1,45 @@
+<footer class="container">
+    <div class="top">
+        <a class="brand" routerLink="/">
+            <span class="mark">yt.</span>
+            <span>
+        Yash Tank
+        <small>Software Engineer · India</small>
+      </span>
+        </a>
+        <nav aria-label="Footer">
+            <a routerLink="/skills">Toolkit</a>
+            <a routerLink="/education">Education</a>
+            <a [href]="site.github">GitHub ↗</a>
+            <a [href]="site.linkedin">LinkedIn ↗</a>
+            <a [href]="'mailto:'+site.email">Email ↗</a>
+        </nav>
+    </div>
+    <div class="bottom">
+        <p>© {{ year }} Yash Tank. Designed and engineered by Yash Tank.</p>
+        <div class="preferences">
+            <a href="/sitemap.xml">Sitemap</a>
+            <button
+                    (click)="analytics.enabled()?analytics.disable():analytics.enable()"
+                    [attr.aria-pressed]="analytics.enabled()"
+                    title="Optional Google Analytics; off by default"
+                    type="button"
+            >
+                {{ analytics.enabled() ? 'Analytics on · Disable' : 'Analytics off · Enable' }}
+            </button>
+            <label>
+                Theme
+                <select
+                    #themeSelect
+                    (change)="theme.set(themeSelect.value)"
+                    [value]="theme.preference()"
+                    aria-label="Color theme"
+                >
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="system">System</option>
+                </select>
+            </label>
+        </div>
+    </div>
+</footer>
