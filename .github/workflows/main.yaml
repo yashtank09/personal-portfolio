@@ -1,12 +1,20 @@
-name: Angular portfolio checks
+name: Validate and deploy portfolio
+
 on:
   pull_request:
   push:
     branches: [main]
+  workflow_dispatch:
+
 permissions:
   contents: read
+
+concurrency:
+  group: portfolio-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
-  validate:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -26,8 +34,23 @@ jobs:
           npm run preview > /tmp/portfolio-preview.log 2>&1 &
           curl --retry 10 --retry-delay 1 --retry-connrefused --fail http://localhost:4300/ > /dev/null
           npm run verify
-      - uses: actions/upload-artifact@v4
+      - name: Upload validation reports
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: portfolio-validation
           path: qa/
+      - name: Upload production build
+        uses: actions/upload-artifact@v4
+        with:
+          name: prod-build
+          path: dist/personal-portfolio/browser/
+          include-hidden-files: true
+          if-no-files-found: error
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    uses: ./.github/workflows/static.yml
+    secrets:
+      GH_TOK: ${{ secrets.GH_TOK }}
